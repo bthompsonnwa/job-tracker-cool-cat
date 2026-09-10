@@ -8,89 +8,124 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg:        #0c1220;
+    --bg:        #0b0f1a;
     --surface:   #141d2e;
     --border:    #1f2d44;
-    --text:      #e8edf5;
+    --text:      #eef2f9;
     --muted:     #6b7f99;
-    --accent:    #f0b429;   /* hybrid — best matches   */
-    --green:     #22d3a0;   /* new badge               */
-    --teal:      #2dd4bf;   /* library                 */
-    --pink:      #f472b6;   /* marketing               */
-    --gray:      #9ca3af;   /* aggregators / misc      */
-    --pill-bg:   #1a2740;
+    --gold:      #ffb020;   /* hybrid — best matches */
+    --teal:      #2ee6c9;   /* library */
+    --pink:      #f8489b;   /* marketing */
+    --blue:      #5b9dff;   /* university */
+    --orange:    #ff8a3d;   /* government */
+    --lime:      #a6e22e;   /* school */
+    --purple:    #b892ff;   /* arts / nonprofit */
+    --slate:     #8fa3c0;   /* aggregators */
+    --new:       #22e0a8;
+    --pill-bg:   #182238;
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; font-size: 15px; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background:
+      radial-gradient(1100px 500px at 8% -10%, rgba(255,176,32,.14), transparent 60%),
+      radial-gradient(1000px 480px at 100% 0%, rgba(91,157,255,.12), transparent 55%),
+      radial-gradient(900px 460px at 50% 110%, rgba(248,72,155,.10), transparent 55%),
+      var(--bg);
+    color: var(--text); min-height: 100vh; font-size: 15px;
+  }
 
-  .header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 18px 16px 12px; position: sticky; top: 0; z-index: 100; }
+  .header { background: rgba(20,29,46,.85); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); padding: 18px 16px 12px; position: sticky; top: 0; z-index: 100; }
   .header-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
-  .site-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 22px; letter-spacing: -.5px; line-height: 1.1; }
+  .site-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 22px; letter-spacing: -.5px; line-height: 1.1;
+    background: linear-gradient(90deg, var(--gold), var(--pink) 60%, var(--blue));
+    -webkit-background-clip: text; background-clip: text; color: transparent; }
   .site-subtitle { font-size: 11px; color: var(--muted); margin-top: 3px; text-transform: uppercase; letter-spacing: .08em; }
   .meta-pill { font-size: 11px; padding: 4px 10px; border-radius: 999px; background: var(--pill-bg); color: var(--muted); border: 1px solid var(--border); white-space: nowrap; }
-  .meta-pill span { color: var(--accent); font-weight: 600; }
+  .meta-pill span { color: var(--gold); font-weight: 600; }
 
-  .tab-bar { display: flex; gap: 4px; margin-bottom: 10px; flex-wrap: wrap; }
-  .tab-btn { font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--pill-bg); color: var(--muted); cursor: pointer; transition: all .15s; white-space: nowrap; }
-  .tab-btn:hover { border-color: var(--accent); color: var(--accent); }
-  .tab-btn.active                 { background: var(--accent); border-color: var(--accent); color: #1a1300; }
-  .tab-btn.active.tab-library     { background: var(--teal);   border-color: var(--teal);   color: #052e28; }
-  .tab-btn.active.tab-marketing   { background: var(--pink);   border-color: var(--pink);   color: #3a0a24; }
-  .tab-btn.active.tab-sources     { background: #374151;       border-color: #374151;       color: #fff; }
+  .tab-bar { display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
+  .tab-btn { display: inline-flex; align-items: center; gap: 6px; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500; padding: 7px 12px; border-radius: 8px; border: 1px solid var(--border); background: var(--pill-bg); color: var(--muted); cursor: pointer; transition: all .15s; white-space: nowrap; }
+  .tab-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+  .tab-btn.tab-hybrid     { background: rgba(255,176,32,.10);  border-color: rgba(255,176,32,.28);  color: var(--gold); }
+  .tab-btn.tab-library    { background: rgba(46,230,201,.10);  border-color: rgba(46,230,201,.28);  color: var(--teal); }
+  .tab-btn.tab-marketing  { background: rgba(248,72,155,.10);  border-color: rgba(248,72,155,.28);  color: var(--pink); }
+  .tab-btn:hover { filter: brightness(1.25); }
+  .tab-btn.active                 { background: var(--gold);  border-color: var(--gold);  color: #241701; }
+  .tab-btn.active.tab-library     { background: var(--teal);  border-color: var(--teal);  color: #04241f; }
+  .tab-btn.active.tab-marketing   { background: var(--pink);  border-color: var(--pink);  color: #380a24; }
+  .tab-btn.active.tab-sources     { background: #3a4459;      border-color: #3a4459;      color: #fff; }
 
   .filter-scroll { display: flex; gap: 6px; overflow-x: auto; padding: 8px 16px 0; scrollbar-width: none; }
   .filter-scroll::-webkit-scrollbar { display: none; }
   .filter-btn { flex-shrink: 0; font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 999px; border: 1px solid var(--border); background: var(--pill-bg); color: var(--muted); cursor: pointer; transition: all .15s; white-space: nowrap; }
-  .filter-btn:hover { border-color: var(--accent); color: var(--accent); }
-  .filter-btn.active { background: var(--accent); border-color: var(--accent); color: #1a1300; }
+  .filter-btn:hover { border-color: var(--gold); color: var(--gold); }
+  .filter-btn.active { background: var(--gold); border-color: var(--gold); color: #241701; }
 
   .controls-wrap { padding: 10px 16px 0; display: flex; gap: 8px; align-items: center; }
   .search-input { flex: 1; background: var(--surface); border: 1px solid var(--border); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 14px; padding: 9px 14px; border-radius: 8px; outline: none; transition: border-color .15s; min-width: 0; }
   .search-input::placeholder { color: var(--muted); }
-  .search-input:focus { border-color: var(--accent); }
+  .search-input:focus { border-color: var(--gold); }
   .sort-select { background: var(--surface); border: 1px solid var(--border); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 13px; padding: 9px 10px; border-radius: 8px; outline: none; cursor: pointer; flex-shrink: 0; }
 
   .stats-bar { display: flex; gap: 20px; padding: 10px 16px; border-bottom: 1px solid var(--border); font-size: 12px; color: var(--muted); flex-wrap: wrap; }
   .stats-bar strong { color: var(--text); }
 
   .job-list { padding: 12px 16px 32px; display: flex; flex-direction: column; gap: 10px; }
-  .job-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 36px 14px 16px; text-decoration: none; display: block; transition: border-color .15s, transform .1s; position: relative; }
+  .job-card { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--border); border-radius: 12px; padding: 14px 36px 14px 16px; text-decoration: none; display: block; transition: border-color .15s, transform .1s; position: relative; }
   .job-card:hover              { transform: translateY(-1px); }
-  .job-card.hybrid:hover       { border-color: var(--accent); }
-  .job-card.library:hover      { border-color: var(--teal); }
-  .job-card.marketing:hover    { border-color: var(--pink); }
+  .job-card.hybrid       { border-left-color: var(--gold); }
+  .job-card.library      { border-left-color: var(--teal); }
+  .job-card.marketing    { border-left-color: var(--pink); }
+  .job-card.hybrid:hover       { border-color: var(--gold); border-left-color: var(--gold); }
+  .job-card.library:hover      { border-color: var(--teal); border-left-color: var(--teal); }
+  .job-card.marketing:hover    { border-color: var(--pink); border-left-color: var(--pink); }
 
   .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 8px; }
   .job-title { font-family: 'Syne', sans-serif; font-weight: 600; font-size: 15px; color: var(--text); line-height: 1.3; flex: 1; }
-  .new-badge { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; background: var(--green); color: #052e1c; padding: 2px 7px; border-radius: 999px; flex-shrink: 0; margin-top: 2px; }
+  .new-badge { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; background: var(--new); color: #052e1c; padding: 2px 7px; border-radius: 999px; flex-shrink: 0; margin-top: 2px; }
   .card-meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
   .badge { font-size: 11px; padding: 2px 8px; border-radius: 999px; font-weight: 500; }
-  .badge-co               { background: rgba(240,180,41,.14);  color: var(--accent); border: 1px solid rgba(240,180,41,.3); }
-  .badge-co.library       { background: rgba(45,212,191,.12);  color: var(--teal);   border-color: rgba(45,212,191,.25); }
-  .badge-co.marketing     { background: rgba(244,114,182,.12); color: var(--pink);   border-color: rgba(244,114,182,.25); }
-  .badge-match    { background: rgba(34,211,160,.1); color: var(--green); border: 1px solid rgba(34,211,160,.2); }
+  .badge-co               { background: rgba(255,176,32,.16);  color: var(--gold); border: 1px solid rgba(255,176,32,.32); }
+  .badge-co.library       { background: rgba(46,230,201,.14);  color: var(--teal); border-color: rgba(46,230,201,.3); }
+  .badge-co.marketing     { background: rgba(248,72,155,.14);  color: var(--pink); border-color: rgba(248,72,155,.3); }
+  .badge-match    { background: rgba(34,224,168,.12); color: var(--new); border: 1px solid rgba(34,224,168,.25); }
   .badge-platform { background: var(--pill-bg); color: var(--muted); border: 1px solid var(--border); }
   .card-detail { font-size: 12px; color: var(--muted); margin-top: 6px; }
   .card-arrow { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--muted); font-size: 18px; opacity: .35; }
 
-  .section-header { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); padding: 16px 0 6px; border-bottom: 1px solid var(--border); margin-bottom: 8px; display: flex; justify-content: space-between; }
-  .section-header .count             { color: var(--accent); }
-  .section-header.library .count     { color: var(--teal); }
-  .section-header.marketing .count   { color: var(--pink); }
+  .section-header { display: flex; align-items: center; gap: 6px; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); padding: 16px 0 6px; border-bottom: 1px solid var(--border); margin-bottom: 8px; }
+  .section-header svg { width: 14px; height: 14px; }
+  .section-header .label { flex: 1; }
+  .section-header.hybrid svg, .section-header.hybrid .count       { color: var(--gold); }
+  .section-header.library svg, .section-header.library .count     { color: var(--teal); }
+  .section-header.marketing svg, .section-header.marketing .count { color: var(--pink); }
 
   .sources-panel { padding: 12px 16px 32px; }
-  .sources-intro { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.5; }
-  .sources-group-label { font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin: 20px 0 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+  .sources-group-label { display: flex; align-items: center; gap: 6px; font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin: 20px 0 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+  .sources-group-label svg { width: 14px; height: 14px; }
   .sources-grid { display: flex; flex-direction: column; gap: 6px; }
-  .source-row { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 10px 14px; display: flex; justify-content: space-between; align-items: center; text-decoration: none; transition: border-color .15s; gap: 8px; }
-  .source-row:hover { border-color: var(--accent); }
+  .source-row { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--border); border-radius: 10px; padding: 10px 14px; display: flex; justify-content: space-between; align-items: center; text-decoration: none; transition: border-color .15s; gap: 8px; }
+  .source-row:hover { filter: brightness(1.15); }
   .source-name  { font-size: 13px; font-weight: 500; color: var(--text); flex: 1; }
   .source-count { font-size: 11px; color: var(--muted); white-space: nowrap; }
-  .source-count .n { color: var(--accent); font-weight: 600; }
+  .source-count .n { font-weight: 600; }
+  .source-row.library        { border-left-color: var(--teal); }
+  .source-row.university     { border-left-color: var(--blue); }
+  .source-row.arts_nonprofit { border-left-color: var(--purple); }
+  .source-row.government     { border-left-color: var(--orange); }
+  .source-row.school         { border-left-color: var(--lime); }
+  .source-row.aggregator     { border-left-color: var(--slate); }
+  .source-row.library .n        { color: var(--teal); }
+  .source-row.university .n     { color: var(--blue); }
+  .source-row.arts_nonprofit .n { color: var(--purple); }
+  .source-row.government .n     { color: var(--orange); }
+  .source-row.school .n         { color: var(--lime); }
+  .source-row.aggregator .n     { color: var(--slate); }
 
   .empty { text-align: center; padding: 60px 20px; color: var(--muted); }
-  .empty-icon { font-size: 40px; margin-bottom: 12px; }
-  .empty h3 { color: var(--text); font-family: 'Syne', sans-serif; margin-bottom: 6px; }
+  .empty svg { width: 34px; height: 34px; margin-bottom: 12px; color: var(--muted); }
+  .empty h3 { color: var(--text); font-family: 'Syne', sans-serif; font-weight: 600; font-size: 15px; }
   .last-updated { font-size: 11px; color: var(--muted); text-align: center; padding: 0 16px 24px; }
 
   @media (min-width: 600px) {
@@ -112,10 +147,10 @@
   </div>
   <div class="tab-bar">
     <button class="tab-btn active"          id="tab-all"        onclick="setTab('all')">All Jobs</button>
-    <button class="tab-btn"                 id="tab-hybrid"     onclick="setTab('hybrid')">⭐ Marketing + Library</button>
-    <button class="tab-btn tab-library"     id="tab-library"    onclick="setTab('library')">📚 Library</button>
-    <button class="tab-btn tab-marketing"   id="tab-marketing"  onclick="setTab('marketing')">📣 Marketing</button>
-    <button class="tab-btn tab-sources"     id="tab-sources"    onclick="setTab('sources')">📋 Sources</button>
+    <button class="tab-btn tab-hybrid"      id="tab-hybrid"     onclick="setTab('hybrid')"></button>
+    <button class="tab-btn tab-library"     id="tab-library"    onclick="setTab('library')"></button>
+    <button class="tab-btn tab-marketing"   id="tab-marketing"  onclick="setTab('marketing')"></button>
+    <button class="tab-btn tab-sources"     id="tab-sources"    onclick="setTab('sources')"></button>
   </div>
   <div class="filter-scroll" id="filter-bar">
     <button class="filter-btn active" data-source="all" onclick="setSource('all')">All Sources</button>
@@ -141,20 +176,40 @@
 let allJobs = [], allSources = [], activeTab = "all", activeSource = "all", searchQuery = "";
 const today = new Date().toISOString().split("T")[0];
 
+// Minimal line icons (stroke currentColor) — no emoji.
+const ICONS = {
+  star:      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12,2 14.9,8.5 22,9.3 16.5,14.1 18.2,21 12,17.3 5.8,21 7.5,14.1 2,9.3 9.1,8.5"/></svg>',
+  book:      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 016.5 3H20v15.5H6.5A2.5 2.5 0 004 21V5.5z"/><path d="M4 18.5A2.5 2.5 0 016.5 16H20"/></svg>',
+  megaphone: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10v4a1 1 0 001 1h2l5 4V5L6 9H4a1 1 0 00-1 1z"/><path d="M16 8.5a4 4 0 010 7"/><path d="M19 6a8 8 0 010 12"/></svg>',
+  grid:      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.5"/></svg>',
+  search:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>',
+  alert:     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3L2 21h20L12 3z"/><line x1="12" y1="10" x2="12" y2="14"/><line x1="12" y1="17.5" x2="12" y2="17.5"/></svg>',
+  landmark:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M4 21V10l8-6 8 6v11"/><path d="M9 21v-6h6v6"/></svg>',
+  cap:       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3L2 8l10 5 10-5-10-5z"/><path d="M6 10.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-5.5"/></svg>',
+  sparkle:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v6M12 15v6M3 12h6M15 12h6M5.6 5.6l4.2 4.2M14.2 14.2l4.2 4.2M18.4 5.6l-4.2 4.2M9.8 14.2l-4.2 4.2"/></svg>',
+  pencil:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>',
+  globe:     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 4 5.7 4 9s-1.5 6.5-4 9c-2.5-2.5-4-5.7-4-9s1.5-6.5 4-9z"/></svg>',
+};
+
 const CAT_CONFIG = {
-  hybrid:    { label: "⭐ Marketing + Library" },
-  library:   { label: "📚 Library"             },
-  marketing: { label: "📣 Marketing & Comms"   },
+  hybrid:    { label: "Marketing + Library", icon: ICONS.star },
+  library:   { label: "Library",             icon: ICONS.book },
+  marketing: { label: "Marketing & Comms",   icon: ICONS.megaphone },
 };
 const CAT_ORDER = ["hybrid","library","marketing"];
 
+document.getElementById("tab-hybrid").innerHTML     = ICONS.star + "<span>Marketing + Library</span>";
+document.getElementById("tab-library").innerHTML    = ICONS.book + "<span>Library</span>";
+document.getElementById("tab-marketing").innerHTML  = ICONS.megaphone + "<span>Marketing</span>";
+document.getElementById("tab-sources").innerHTML    = ICONS.grid + "<span>Sources</span>";
+
 const SOURCE_TYPE_GROUPS = [
-  ["library",        "📚 Public Libraries"],
-  ["university",     "🎓 Universities & Colleges"],
-  ["arts_nonprofit", "🎨 Arts, Museums & Nonprofits"],
-  ["government",     "🏛️ City & County Government"],
-  ["school",         "🏫 School Districts"],
-  ["aggregator",     "🔎 Aggregators & Regional Boards"],
+  ["library",        "Public Libraries",           ICONS.book],
+  ["university",     "Universities & Colleges",    ICONS.cap],
+  ["arts_nonprofit", "Arts, Museums & Nonprofits",  ICONS.sparkle],
+  ["government",     "City & County Government",   ICONS.landmark],
+  ["school",         "School Districts",           ICONS.pencil],
+  ["aggregator",     "Aggregators & Regional Boards", ICONS.globe],
 ];
 
 async function loadJobs() {
@@ -168,14 +223,10 @@ async function loadJobs() {
     buildFilters();
     renderAll();
     document.getElementById("last-updated").textContent =
-      data.last_updated
-        ? "Last updated: " + new Date(data.last_updated).toLocaleString()
-        : "Run the scraper to populate this dashboard.";
+      data.last_updated ? "Last updated: " + new Date(data.last_updated).toLocaleString() : "";
   } catch(e) {
     document.getElementById("main-content").innerHTML =
-      `<div class="job-list"><div class="empty"><div class="empty-icon">⚠️</div>
-       <h3>Couldn't load jobs.json</h3>
-       <p>Make sure index.html is inside docs/ alongside jobs.json.</p></div></div>`;
+      `<div class="job-list"><div class="empty">${ICONS.alert}<h3>Couldn't load jobs.json</h3></div></div>`;
   }
 }
 
@@ -267,9 +318,8 @@ function renderAll() {
      <span><strong>${allJobs.length}</strong> total</span>`;
 
   if (!jobs.length) {
-    mc.innerHTML = `<div class="job-list"><div class="empty"><div class="empty-icon">🔍</div>
-      <h3>${allJobs.length ? "No matches" : "No jobs yet"}</h3>
-      <p>${allJobs.length ? "Clear filter or search." : "Run the scraper first."}</p></div></div>`;
+    mc.innerHTML = `<div class="job-list"><div class="empty">${ICONS.search}
+      <h3>${allJobs.length ? "No matches" : "No jobs yet"}</h3></div></div>`;
     return;
   }
 
@@ -279,7 +329,8 @@ function renderAll() {
       const group = jobs.filter(j => (j.category||"marketing") === cat);
       if (!group.length) return;
       html += `<div class="section-header ${cat}">
-        <span>${CAT_CONFIG[cat].label}</span>
+        ${CAT_CONFIG[cat].icon}
+        <span class="label">${CAT_CONFIG[cat].label}</span>
         <span class="count">${group.length}</span>
       </div>`;
       html += group.map(cardHTML).join("");
@@ -301,16 +352,15 @@ function renderSources(mc) {
     const right = count > 0
       ? `<span class="source-count"><span class="n">${count}</span> match${count!==1?"es":""}</span>`
       : `<span class="source-count">0 matches</span>`;
-    return `<a class="source-row" href="${esc(s.url)}" target="_blank" rel="noopener">
+    return `<a class="source-row ${esc(s.type)}" href="${esc(s.url)}" target="_blank" rel="noopener">
       <span class="source-name">${esc(s.name)}</span>${right}</a>`;
   }
 
-  let html = `<div class="sources-panel">
-    <p class="sources-intro">All sources checked daily. Click any to visit directly.</p>`;
-  SOURCE_TYPE_GROUPS.forEach(([type, label]) => {
+  let html = `<div class="sources-panel">`;
+  SOURCE_TYPE_GROUPS.forEach(([type, label, icon]) => {
     const srcs = allSources.filter(s => s.type === type);
     if (!srcs.length) return;
-    html += `<div class="sources-group-label">${esc(label)} (${srcs.length})</div>
+    html += `<div class="sources-group-label">${icon}<span>${esc(label)} (${srcs.length})</span></div>
              <div class="sources-grid">${srcs.map(sourceRow).join("")}</div>`;
   });
   html += "</div>";

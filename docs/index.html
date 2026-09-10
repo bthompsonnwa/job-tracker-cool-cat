@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NWA Marketing + Library Job Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:        #0c1220;
+    --surface:   #141d2e;
+    --border:    #1f2d44;
+    --text:      #e8edf5;
+    --muted:     #6b7f99;
+    --accent:    #f0b429;   /* hybrid — best matches   */
+    --green:     #22d3a0;   /* new badge               */
+    --teal:      #2dd4bf;   /* library                 */
+    --pink:      #f472b6;   /* marketing               */
+    --gray:      #9ca3af;   /* aggregators / misc      */
+    --pill-bg:   #1a2740;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; font-size: 15px; }
+
+  .header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 18px 16px 12px; position: sticky; top: 0; z-index: 100; }
+  .header-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+  .site-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 22px; letter-spacing: -.5px; line-height: 1.1; }
+  .site-subtitle { font-size: 11px; color: var(--muted); margin-top: 3px; text-transform: uppercase; letter-spacing: .08em; }
+  .meta-pill { font-size: 11px; padding: 4px 10px; border-radius: 999px; background: var(--pill-bg); color: var(--muted); border: 1px solid var(--border); white-space: nowrap; }
+  .meta-pill span { color: var(--accent); font-weight: 600; }
+
+  .tab-bar { display: flex; gap: 4px; margin-bottom: 10px; flex-wrap: wrap; }
+  .tab-btn { font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--pill-bg); color: var(--muted); cursor: pointer; transition: all .15s; white-space: nowrap; }
+  .tab-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .tab-btn.active                 { background: var(--accent); border-color: var(--accent); color: #1a1300; }
+  .tab-btn.active.tab-library     { background: var(--teal);   border-color: var(--teal);   color: #052e28; }
+  .tab-btn.active.tab-marketing   { background: var(--pink);   border-color: var(--pink);   color: #3a0a24; }
+  .tab-btn.active.tab-sources     { background: #374151;       border-color: #374151;       color: #fff; }
+
+  .filter-scroll { display: flex; gap: 6px; overflow-x: auto; padding: 8px 16px 0; scrollbar-width: none; }
+  .filter-scroll::-webkit-scrollbar { display: none; }
+  .filter-btn { flex-shrink: 0; font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 999px; border: 1px solid var(--border); background: var(--pill-bg); color: var(--muted); cursor: pointer; transition: all .15s; white-space: nowrap; }
+  .filter-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .filter-btn.active { background: var(--accent); border-color: var(--accent); color: #1a1300; }
+
+  .controls-wrap { padding: 10px 16px 0; display: flex; gap: 8px; align-items: center; }
+  .search-input { flex: 1; background: var(--surface); border: 1px solid var(--border); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 14px; padding: 9px 14px; border-radius: 8px; outline: none; transition: border-color .15s; min-width: 0; }
+  .search-input::placeholder { color: var(--muted); }
+  .search-input:focus { border-color: var(--accent); }
+  .sort-select { background: var(--surface); border: 1px solid var(--border); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 13px; padding: 9px 10px; border-radius: 8px; outline: none; cursor: pointer; flex-shrink: 0; }
+
+  .stats-bar { display: flex; gap: 20px; padding: 10px 16px; border-bottom: 1px solid var(--border); font-size: 12px; color: var(--muted); flex-wrap: wrap; }
+  .stats-bar strong { color: var(--text); }
+
+  .job-list { padding: 12px 16px 32px; display: flex; flex-direction: column; gap: 10px; }
+  .job-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 36px 14px 16px; text-decoration: none; display: block; transition: border-color .15s, transform .1s; position: relative; }
+  .job-card:hover              { transform: translateY(-1px); }
+  .job-card.hybrid:hover       { border-color: var(--accent); }
+  .job-card.library:hover      { border-color: var(--teal); }
+  .job-card.marketing:hover    { border-color: var(--pink); }
+
+  .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 8px; }
+  .job-title { font-family: 'Syne', sans-serif; font-weight: 600; font-size: 15px; color: var(--text); line-height: 1.3; flex: 1; }
+  .new-badge { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; background: var(--green); color: #052e1c; padding: 2px 7px; border-radius: 999px; flex-shrink: 0; margin-top: 2px; }
+  .card-meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .badge { font-size: 11px; padding: 2px 8px; border-radius: 999px; font-weight: 500; }
+  .badge-co               { background: rgba(240,180,41,.14);  color: var(--accent); border: 1px solid rgba(240,180,41,.3); }
+  .badge-co.library       { background: rgba(45,212,191,.12);  color: var(--teal);   border-color: rgba(45,212,191,.25); }
+  .badge-co.marketing     { background: rgba(244,114,182,.12); color: var(--pink);   border-color: rgba(244,114,182,.25); }
+  .badge-match    { background: rgba(34,211,160,.1); color: var(--green); border: 1px solid rgba(34,211,160,.2); }
+  .badge-platform { background: var(--pill-bg); color: var(--muted); border: 1px solid var(--border); }
+  .card-detail { font-size: 12px; color: var(--muted); margin-top: 6px; }
+  .card-arrow { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--muted); font-size: 18px; opacity: .35; }
+
+  .section-header { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); padding: 16px 0 6px; border-bottom: 1px solid var(--border); margin-bottom: 8px; display: flex; justify-content: space-between; }
+  .section-header .count             { color: var(--accent); }
+  .section-header.library .count     { color: var(--teal); }
+  .section-header.marketing .count   { color: var(--pink); }
+
+  .sources-panel { padding: 12px 16px 32px; }
+  .sources-intro { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.5; }
+  .sources-group-label { font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin: 20px 0 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+  .sources-grid { display: flex; flex-direction: column; gap: 6px; }
+  .source-row { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 10px 14px; display: flex; justify-content: space-between; align-items: center; text-decoration: none; transition: border-color .15s; gap: 8px; }
+  .source-row:hover { border-color: var(--accent); }
+  .source-name  { font-size: 13px; font-weight: 500; color: var(--text); flex: 1; }
+  .source-count { font-size: 11px; color: var(--muted); white-space: nowrap; }
+  .source-count .n { color: var(--accent); font-weight: 600; }
+
+  .empty { text-align: center; padding: 60px 20px; color: var(--muted); }
+  .empty-icon { font-size: 40px; margin-bottom: 12px; }
+  .empty h3 { color: var(--text); font-family: 'Syne', sans-serif; margin-bottom: 6px; }
+  .last-updated { font-size: 11px; color: var(--muted); text-align: center; padding: 0 16px 24px; }
+
+  @media (min-width: 600px) {
+    .header, .controls-wrap, .filter-scroll, .stats-bar { padding-left: 24px; padding-right: 24px; }
+    .job-list, .sources-panel { padding: 14px 24px 40px; }
+    .sources-grid { display: grid; grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-top">
+    <div>
+      <div class="site-title">NWA Marketing + Library Tracker</div>
+      <div class="site-subtitle" id="source-count-label">Loading…</div>
+    </div>
+    <div class="meta-pill" id="total-pill">loading…</div>
+  </div>
+  <div class="tab-bar">
+    <button class="tab-btn active"          id="tab-all"        onclick="setTab('all')">All Jobs</button>
+    <button class="tab-btn"                 id="tab-hybrid"     onclick="setTab('hybrid')">⭐ Marketing + Library</button>
+    <button class="tab-btn tab-library"     id="tab-library"    onclick="setTab('library')">📚 Library</button>
+    <button class="tab-btn tab-marketing"   id="tab-marketing"  onclick="setTab('marketing')">📣 Marketing</button>
+    <button class="tab-btn tab-sources"     id="tab-sources"    onclick="setTab('sources')">📋 Sources</button>
+  </div>
+  <div class="filter-scroll" id="filter-bar">
+    <button class="filter-btn active" data-source="all" onclick="setSource('all')">All Sources</button>
+  </div>
+</div>
+
+<div class="controls-wrap" id="controls-wrap">
+  <input class="search-input" id="search" type="search" placeholder="Search jobs, sources, keywords…" autocomplete="off">
+  <select class="sort-select" id="sort-select" onchange="renderAll()">
+    <option value="newest">Newest First</option>
+    <option value="company">Source A–Z</option>
+    <option value="title">Title A–Z</option>
+    <option value="category">By Category</option>
+  </select>
+</div>
+<div class="stats-bar" id="stats-bar"><span>Loading…</span></div>
+<div id="main-content">
+  <div class="job-list"><div style="text-align:center;padding:60px;color:var(--muted);">Fetching jobs…</div></div>
+</div>
+<div class="last-updated" id="last-updated"></div>
+
+<script>
+let allJobs = [], allSources = [], activeTab = "all", activeSource = "all", searchQuery = "";
+const today = new Date().toISOString().split("T")[0];
+
+const CAT_CONFIG = {
+  hybrid:    { label: "⭐ Marketing + Library" },
+  library:   { label: "📚 Library"             },
+  marketing: { label: "📣 Marketing & Comms"   },
+};
+const CAT_ORDER = ["hybrid","library","marketing"];
+
+const SOURCE_TYPE_GROUPS = [
+  ["library",        "📚 Public Libraries"],
+  ["university",     "🎓 Universities & Colleges"],
+  ["arts_nonprofit", "🎨 Arts, Museums & Nonprofits"],
+  ["government",     "🏛️ City & County Government"],
+  ["school",         "🏫 School Districts"],
+  ["aggregator",     "🔎 Aggregators & Regional Boards"],
+];
+
+async function loadJobs() {
+  try {
+    const r    = await fetch("jobs.json?t=" + Date.now());
+    const data = await r.json();
+    allJobs    = data.jobs    || [];
+    allSources = data.sources || [];
+    document.getElementById("source-count-label").textContent =
+      `${allSources.length} sources · Northwest Arkansas`;
+    buildFilters();
+    renderAll();
+    document.getElementById("last-updated").textContent =
+      data.last_updated
+        ? "Last updated: " + new Date(data.last_updated).toLocaleString()
+        : "Run the scraper to populate this dashboard.";
+  } catch(e) {
+    document.getElementById("main-content").innerHTML =
+      `<div class="job-list"><div class="empty"><div class="empty-icon">⚠️</div>
+       <h3>Couldn't load jobs.json</h3>
+       <p>Make sure index.html is inside docs/ alongside jobs.json.</p></div></div>`;
+  }
+}
+
+function buildFilters() {
+  const bar = document.getElementById("filter-bar");
+  bar.querySelectorAll("[data-source]:not([data-source='all'])").forEach(el => el.remove());
+  const relevant = activeTab === "all"
+    ? allJobs
+    : allJobs.filter(j => (j.category || "marketing") === activeTab);
+  const names = [...new Set(relevant.map(j => j.district))].sort();
+  names.forEach(s => {
+    const btn = document.createElement("button");
+    btn.className = "filter-btn";
+    btn.dataset.source = s;
+    btn.textContent = s;
+    btn.onclick = () => setSource(s);
+    bar.appendChild(btn);
+  });
+}
+
+function setTab(tab) {
+  activeTab    = tab;
+  activeSource = "all";
+  searchQuery  = "";
+  document.getElementById("search").value = "";
+  document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+  document.getElementById("tab-" + tab).classList.add("active");
+  document.querySelectorAll(".filter-btn").forEach(b =>
+    b.classList.toggle("active", b.dataset.source === "all"));
+  const show = tab !== "sources";
+  document.getElementById("controls-wrap").style.display = show ? "" : "none";
+  document.getElementById("stats-bar").style.display     = show ? "" : "none";
+  document.getElementById("filter-bar").style.display    = show ? "" : "none";
+  buildFilters();
+  renderAll();
+}
+
+function setSource(source) {
+  activeSource = source;
+  document.querySelectorAll(".filter-btn").forEach(b =>
+    b.classList.toggle("active", b.dataset.source === source));
+  renderAll();
+}
+
+document.getElementById("search").addEventListener("input", e => {
+  searchQuery = e.target.value.toLowerCase(); renderAll();
+});
+
+function filtered() {
+  return allJobs.filter(j => {
+    const cat = j.category || "marketing";
+    if (activeTab !== "all" && activeTab !== "sources" && cat !== activeTab) return false;
+    if (activeSource !== "all" && j.district !== activeSource) return false;
+    if (searchQuery && ![j.title, j.district, j.location||"", j.match_reason||""].some(s => s.toLowerCase().includes(searchQuery))) return false;
+    return true;
+  });
+}
+
+function sorted(jobs) {
+  const by = document.getElementById("sort-select").value;
+  return [...jobs].sort((a, b) => {
+    if (by === "newest") {
+      const aN = a.first_seen === today ? 0 : 1, bN = b.first_seen === today ? 0 : 1;
+      if (aN !== bN) return aN - bN;
+      return (b.first_seen || "").localeCompare(a.first_seen || "");
+    }
+    if (by === "company")  return a.district.localeCompare(b.district);
+    if (by === "title")    return a.title.localeCompare(b.title);
+    if (by === "category") {
+      const ao = CAT_ORDER.indexOf(a.category||"marketing"), bo = CAT_ORDER.indexOf(b.category||"marketing");
+      if (ao !== bo) return ao - bo;
+      return a.district.localeCompare(b.district);
+    }
+    return 0;
+  });
+}
+
+function renderAll() {
+  const mc = document.getElementById("main-content");
+  if (activeTab === "sources") { renderSources(mc); return; }
+
+  const jobs    = sorted(filtered());
+  const newOnes = jobs.filter(j => j.first_seen === today);
+
+  document.getElementById("total-pill").innerHTML = `<span>${allJobs.length}</span> matches`;
+  document.getElementById("stats-bar").innerHTML  =
+    `<span><strong>${jobs.length}</strong> showing</span>
+     <span><strong>${newOnes.length}</strong> new today</span>
+     <span><strong>${allJobs.length}</strong> total</span>`;
+
+  if (!jobs.length) {
+    mc.innerHTML = `<div class="job-list"><div class="empty"><div class="empty-icon">🔍</div>
+      <h3>${allJobs.length ? "No matches" : "No jobs yet"}</h3>
+      <p>${allJobs.length ? "Clear filter or search." : "Run the scraper first."}</p></div></div>`;
+    return;
+  }
+
+  let html = '<div class="job-list">';
+  if (activeTab === "all") {
+    CAT_ORDER.forEach(cat => {
+      const group = jobs.filter(j => (j.category||"marketing") === cat);
+      if (!group.length) return;
+      html += `<div class="section-header ${cat}">
+        <span>${CAT_CONFIG[cat].label}</span>
+        <span class="count">${group.length}</span>
+      </div>`;
+      html += group.map(cardHTML).join("");
+    });
+  } else {
+    html += jobs.map(cardHTML).join("");
+  }
+  html += "</div>";
+  mc.innerHTML = html;
+}
+
+function renderSources(mc) {
+  document.getElementById("total-pill").innerHTML = `<span>${allSources.length}</span> sources`;
+  const jobsBySource = {};
+  allJobs.forEach(j => { jobsBySource[j.district] = (jobsBySource[j.district]||0) + 1; });
+
+  function sourceRow(s) {
+    const count = jobsBySource[s.name] || 0;
+    const right = count > 0
+      ? `<span class="source-count"><span class="n">${count}</span> match${count!==1?"es":""}</span>`
+      : `<span class="source-count">0 matches</span>`;
+    return `<a class="source-row" href="${esc(s.url)}" target="_blank" rel="noopener">
+      <span class="source-name">${esc(s.name)}</span>${right}</a>`;
+  }
+
+  let html = `<div class="sources-panel">
+    <p class="sources-intro">All sources checked daily. Click any to visit directly.</p>`;
+  SOURCE_TYPE_GROUPS.forEach(([type, label]) => {
+    const srcs = allSources.filter(s => s.type === type);
+    if (!srcs.length) return;
+    html += `<div class="sources-group-label">${esc(label)} (${srcs.length})</div>
+             <div class="sources-grid">${srcs.map(sourceRow).join("")}</div>`;
+  });
+  html += "</div>";
+  mc.innerHTML = html;
+}
+
+function cardHTML(j) {
+  const cat   = j.category || "marketing";
+  const isNew = j.first_seen === today;
+  const det   = [j.location, j.posted_date ? "Posted " + j.posted_date : ""].filter(Boolean).join(" · ");
+  return `
+  <a class="job-card ${esc(cat)}" href="${esc(j.url)}" target="_blank" rel="noopener">
+    <div class="card-top">
+      <div class="job-title">${esc(j.title)}</div>
+      ${isNew ? '<span class="new-badge">New</span>' : ""}
+    </div>
+    <div class="card-meta">
+      <span class="badge badge-co ${esc(cat)}">${esc(j.district)}</span>
+      ${j.match_reason && j.match_reason !== "no_match" ? `<span class="badge badge-match">${esc(j.match_reason)}</span>` : ""}
+      <span class="badge badge-platform">${esc(j.platform)}</span>
+    </div>
+    ${det ? `<div class="card-detail">${esc(det)}</div>` : ""}
+    <span class="card-arrow">›</span>
+  </a>`;
+}
+
+function esc(s) {
+  return String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+}
+
+loadJobs();
+</script>
+</body>
+</html>

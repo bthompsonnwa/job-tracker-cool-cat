@@ -1,5 +1,357 @@
 {
-  "last_updated": null,
-  "jobs": [],
-  "sources": []
+  "last_updated": "2026-09-11T02:03",
+  "jobs": [
+    {
+      "id": "e0b8d12efad0",
+      "title": "Marketing Manager",
+      "district": "Crystal Bridges / AWE",
+      "location": "Bentonville, AR",
+      "url": "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness/job/Bentonville-AR/Marketing-Manager_JR2510",
+      "platform": "Workday",
+      "category": "marketing",
+      "genre": "community",
+      "match_reason": "marketing manager",
+      "posted_date": "Posted 6 Days Ago",
+      "first_seen": "2026-09-11"
+    },
+    {
+      "id": "4597a1850043",
+      "title": "Director Digital Marketing Strategy & Activation",
+      "district": "Tyson Foods",
+      "location": "",
+      "url": "https://talent.careersnwa.com/companies/tyson-foods/jobs/92725962-director-digital-marketing-strategy-activation#content",
+      "platform": "CareersNWA",
+      "category": "marketing",
+      "genre": "commercial",
+      "match_reason": "digital marketing",
+      "posted_date": "",
+      "first_seen": "2026-09-11"
+    },
+    {
+      "id": "904658635d81",
+      "title": "Content Marketing Manager",
+      "district": "Sps Commerce 2",
+      "location": "",
+      "url": "https://talent.careersnwa.com/companies/sps-commerce-2-30a3f118-afb2-45bb-b8e8-a09630cddd50/jobs/92624856-content-marketing-manager#content",
+      "platform": "CareersNWA",
+      "category": "marketing",
+      "genre": "commercial",
+      "match_reason": "marketing manager",
+      "posted_date": "",
+      "first_seen": "2026-09-11"
+    },
+    {
+      "id": "5a5372528a67",
+      "title": "Digital Marketing Manager",
+      "district": "Tyson Foods",
+      "location": "",
+      "url": "https://talent.careersnwa.com/companies/tyson-foods/jobs/92412291-digital-marketing-manager#content",
+      "platform": "CareersNWA",
+      "category": "marketing",
+      "genre": "commercial",
+      "match_reason": "marketing manager",
+      "posted_date": "",
+      "first_seen": "2026-09-11"
+    },
+    {
+      "id": "31ab245a1a25",
+      "title": "Senior Digital Marketing Manager",
+      "district": "Tyson Foods",
+      "location": "",
+      "url": "https://talent.careersnwa.com/companies/tyson-foods/jobs/92412293-senior-digital-marketing-manager#content",
+      "platform": "CareersNWA",
+      "category": "marketing",
+      "genre": "commercial",
+      "match_reason": "marketing manager",
+      "posted_date": "",
+      "first_seen": "2026-09-11"
+    },
+    {
+      "id": "f7cb1c3fc641",
+      "title": "Senior Marketing Manager",
+      "district": "Tyson Foods",
+      "location": "",
+      "url": "https://talent.careersnwa.com/companies/tyson-foods/jobs/92412295-senior-marketing-manager#content",
+      "platform": "CareersNWA",
+      "category": "marketing",
+      "genre": "commercial",
+      "match_reason": "marketing manager",
+      "posted_date": "",
+      "first_seen": "2026-09-11"
+    },
+    {
+      "id": "5525341e9098",
+      "title": "Marketing Manager",
+      "district": "Tyson Foods",
+      "location": "",
+      "url": "https://talent.careersnwa.com/companies/tyson-foods/jobs/92412297-marketing-manager#content",
+      "platform": "CareersNWA",
+      "category": "marketing",
+      "genre": "commercial",
+      "match_reason": "marketing manager",
+      "posted_date": "",
+      "first_seen": "2026-09-11"
+    },
+    {
+      "id": "d711ce170192",
+      "title": "Associate Brand Manager",
+      "district": "Tyson Foods",
+      "location": "",
+      "url": "https://talent.careersnwa.com/companies/tyson-foods/jobs/92248185-associate-brand-manager#content",
+      "platform": "CareersNWA",
+      "category": "marketing",
+      "genre": "commercial",
+      "match_reason": "brand manager",
+      "posted_date": "",
+      "first_seen": "2026-09-11"
+    },
+    {
+      "id": "cbe545b709f1",
+      "title": "Brand Manager",
+      "district": "Tyson Foods",
+      "location": "",
+      "url": "https://talent.careersnwa.com/companies/tyson-foods/jobs/92248124-brand-manager#content",
+      "platform": "CareersNWA",
+      "category": "marketing",
+      "genre": "commercial",
+      "match_reason": "brand manager",
+      "posted_date": "",
+      "first_seen": "2026-09-11"
+    },
+    {
+      "id": "42adaf4643d6",
+      "title": "Community Outreach & Communications Coordinator",
+      "district": "Community Clinic",
+      "location": "",
+      "url": "https://talent.careersnwa.com/companies/community-clinic/jobs/92122841-community-outreach-communications-coordinator#content",
+      "platform": "CareersNWA",
+      "category": "marketing",
+      "genre": "commercial",
+      "match_reason": "communications coordinator",
+      "posted_date": "",
+      "first_seen": "2026-09-11"
+    }
+  ],
+  "sources": [
+    {
+      "name": "Bentonville SD",
+      "url": "https://www.applitrack.com/bentonville/onlineapp/default.aspx?all=1",
+      "type": "school"
+    },
+    {
+      "name": "Farmington SD",
+      "url": "https://www.applitrack.com/farmcards/onlineapp/jobpostings/view.asp?all=1",
+      "type": "school"
+    },
+    {
+      "name": "Elkins SD",
+      "url": "https://elkinsdistrict.tedk12.com/hire/index.aspx",
+      "type": "school"
+    },
+    {
+      "name": "Greenland SD",
+      "url": "https://greenlandschools.tedk12.com/hire/index.aspx",
+      "type": "school"
+    },
+    {
+      "name": "Fayetteville Public Schools",
+      "url": "https://district.tedk12.com/hire/index.aspx",
+      "type": "school"
+    },
+    {
+      "name": "Decatur SD",
+      "url": "https://decatursd.schoolspring.com/",
+      "type": "school"
+    },
+    {
+      "name": "Gravette SD",
+      "url": "https://gravette.schoolspring.com/",
+      "type": "school"
+    },
+    {
+      "name": "Gentry SD",
+      "url": "https://gentry.schoolspring.com/",
+      "type": "school"
+    },
+    {
+      "name": "Huntsville SD",
+      "url": "https://hsd.schoolspring.com/",
+      "type": "school"
+    },
+    {
+      "name": "Pea Ridge SD",
+      "url": "https://pearidge.schoolspring.com/",
+      "type": "school"
+    },
+    {
+      "name": "Prairie Grove SD",
+      "url": "https://pgtigers.schoolspring.com/",
+      "type": "school"
+    },
+    {
+      "name": "Rogers SD",
+      "url": "https://rogersschools.schoolspring.com/",
+      "type": "school"
+    },
+    {
+      "name": "Siloam Springs SD",
+      "url": "https://siloamschools.schoolspring.com/",
+      "type": "school"
+    },
+    {
+      "name": "LISA Academy",
+      "url": "https://lisaacademy.schoolspring.com/",
+      "type": "school"
+    },
+    {
+      "name": "Lincoln Consolidated SD",
+      "url": "https://careers.smartrecruiters.com/Lincoln2",
+      "type": "school"
+    },
+    {
+      "name": "Springdale SD",
+      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsJobsMain",
+      "type": "school"
+    },
+    {
+      "name": "West Fork SD",
+      "url": "https://flowpoint.wftigers.org/careers/opportunities/",
+      "type": "school"
+    },
+    {
+      "name": "Haas Hall Academy",
+      "url": "https://haashall.org/welcome__trashed/employment/",
+      "type": "school"
+    },
+    {
+      "name": "Rogers (City)",
+      "url": "https://www.rogersar.gov/Jobs.aspx",
+      "type": "government"
+    },
+    {
+      "name": "City of Bella Vista",
+      "url": "https://recruiting.paylocity.com/recruiting/jobs/All/b1e8c19e-977f-41ec-89e7-a138ab6e72eb/City-of-Bella-Vista",
+      "type": "government"
+    },
+    {
+      "name": "Lowell (City)",
+      "url": "https://www.lowellarkansas.gov/jobs",
+      "type": "government"
+    },
+    {
+      "name": "Washington County AR",
+      "url": "https://www.washingtoncountyar.gov/government/departments-f-z/human-resources/job-postings",
+      "type": "government"
+    },
+    {
+      "name": "Springdale Public Library",
+      "url": "https://springdalelibrary.org/employment/",
+      "type": "library"
+    },
+    {
+      "name": "Fayetteville Public Library",
+      "url": "https://www.faylib.org/work-8103",
+      "type": "library"
+    },
+    {
+      "name": "Walton Arts Center",
+      "url": "https://waltonartscenter.org/about/employment/",
+      "type": "arts_nonprofit"
+    },
+    {
+      "name": "University of Arkansas (UAF)",
+      "url": "https://uasys.wd5.myworkdayjobs.com/UAF_External_Career_Site",
+      "type": "university"
+    },
+    {
+      "name": "NWACC",
+      "url": "https://nwacc.wd1.myworkdayjobs.com/NWACC_External_Career_Site",
+      "type": "university"
+    },
+    {
+      "name": "Crystal Bridges / AWE",
+      "url": "https://awe.wd1.myworkdayjobs.com/Art_and_Wellness",
+      "type": "arts_nonprofit"
+    },
+    {
+      "name": "JBU (Staff)",
+      "url": "https://www.jbu.edu/human-resources/staff-job-listings/",
+      "type": "university"
+    },
+    {
+      "name": "JBU (Faculty)",
+      "url": "https://www.jbu.edu/human-resources/faculty-job-listings/",
+      "type": "university"
+    },
+    {
+      "name": "ADP (NWA)",
+      "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=a75698d1-4927-42e2-8b24-4b1e4d60fa54",
+      "type": "aggregator"
+    },
+    {
+      "name": "AR State Jobs (NWA)",
+      "url": "https://arcareers.arkansas.gov/search/?searchby=location&q=&locationsearch=northwest+arkansas",
+      "type": "aggregator"
+    },
+    {
+      "name": "University of Arkansas (CareersNWA)",
+      "url": "https://talent.careersnwa.com/companies/university-of-arkansas",
+      "type": "university"
+    },
+    {
+      "name": "NWACC (CareersNWA)",
+      "url": "https://talent.careersnwa.com/companies/northwest-arkansas-community-college",
+      "type": "university"
+    },
+    {
+      "name": "City of Fayetteville",
+      "url": "https://talent.careersnwa.com/companies/city-of-fayetteville",
+      "type": "government"
+    },
+    {
+      "name": "City of Springdale",
+      "url": "https://talent.careersnwa.com/companies/city-of-springdale",
+      "type": "government"
+    },
+    {
+      "name": "City of Bentonville",
+      "url": "https://talent.careersnwa.com/companies/city-of-bentonville",
+      "type": "government"
+    },
+    {
+      "name": "Benton County Government",
+      "url": "https://talent.careersnwa.com/companies/benton-county-government",
+      "type": "government"
+    },
+    {
+      "name": "The Jones Center",
+      "url": "https://talent.careersnwa.com/companies/the-jones-center",
+      "type": "arts_nonprofit"
+    },
+    {
+      "name": "TheatreSquared",
+      "url": "https://talent.careersnwa.com/companies/theatresquared",
+      "type": "arts_nonprofit"
+    },
+    {
+      "name": "Northwest Arkansas Council",
+      "url": "https://talent.careersnwa.com/companies/northwest-arkansas-council",
+      "type": "arts_nonprofit"
+    },
+    {
+      "name": "Botanical Garden of the Ozarks",
+      "url": "https://talent.careersnwa.com/companies/botanical-garden-of-the-ozarks-2",
+      "type": "arts_nonprofit"
+    },
+    {
+      "name": "Scott Family Amazeum",
+      "url": "https://talent.careersnwa.com/companies/scott-family-amazeum",
+      "type": "arts_nonprofit"
+    },
+    {
+      "name": "CareersNWA Regional Feed (Marketing & Comms)",
+      "url": "https://talent.careersnwa.com/jobs?filter=eyJqb2JfZnVuY3Rpb25zIjpbIk1hcmtldGluZyAmIENvbW11bmljYXRpb25zIl19",
+      "type": "aggregator"
+    }
+  ]
 }

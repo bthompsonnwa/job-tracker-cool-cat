@@ -126,9 +126,9 @@ MARKETING_KEYWORDS = [
     "graphic designer", "graphic design coordinator", "web content coordinator",
     "engagement coordinator", "community engagement coordinator",
     "community outreach coordinator", "outreach coordinator", "outreach specialist",
-    "outreach manager", "event coordinator", "events coordinator", "events specialist",
+    "outreach manager", "events specialist",
     "special events coordinator", "event manager", "events manager",
-    "program coordinator", "programming coordinator", "public programs coordinator",
+    "programming coordinator", "public programs coordinator",
     "volunteer coordinator", "development and communications", "membership and marketing",
     "donor relations coordinator", "member engagement coordinator",
     "visitor services manager", "visitor services coordinator", "guest experience manager",
@@ -170,6 +170,9 @@ HARD_EXCLUDE_KEYWORDS = [
     "chief", "cto", "cfo", "ceo", "coo", "superintendent",
     "regional manager", "district manager", "general manager", "store manager",
     "executive director", "senior director",
+    # Fields/attributes explicitly out of scope for this candidate
+    "agriculture", "internship", "intern", "trade coordinator", "trades coordinator",
+    "apprenticeship", "remote",
 ]
 
 
@@ -318,7 +321,43 @@ ALL_SOURCES = [
         else "government" if any(x in s["name"] for x in ["City of", "County"])
         else "arts_nonprofit"}
     for s in CAREERSNWA_SOURCES
-] + [{"name": "CareersNWA — Marketing & Comms (regional)", "url": CAREERSNWA_REGIONAL_FEED, "type": "aggregator"}]
+] + [{"name": "CareersNWA Regional Feed (Marketing & Comms)", "url": CAREERSNWA_REGIONAL_FEED, "type": "aggregator"}]
+
+# ──────────────────────────────────────────────────────────────────────────────
+# GENRE CLASSIFICATION — Education / Community / Commercial
+#
+# Fixed sources (schools, universities, libraries, government, arts/nonprofits)
+# are classified from their known type. Dynamic per-job employers (from the
+# CareersNWA regional feed, ADP, Adzuna, AR State Jobs) are classified by a
+# keyword heuristic on the employer name; anything that doesn't look like a
+# public/nonprofit/education entity defaults to "commercial".
+# ──────────────────────────────────────────────────────────────────────────────
+
+SOURCE_TYPE_BY_NAME = {s["name"]: s["type"] for s in ALL_SOURCES}
+
+_EDUCATION_NAME_HINTS = [
+    "university", "college", " sd", "school district", "public schools",
+    "academy", "elementary", "middle school", "high school",
+]
+_COMMUNITY_NAME_HINTS = [
+    "city of", "county", "public library", "library", "museum", "arts center",
+    "theatre", "theater", "botanical garden", "council", "town of", "state jobs",
+]
+
+
+def classify_genre(district):
+    src_type = SOURCE_TYPE_BY_NAME.get(district)
+    if src_type in ("school", "university"):
+        return "education"
+    if src_type in ("library", "government", "arts_nonprofit"):
+        return "community"
+    d = district.lower()
+    if any(h in d for h in _EDUCATION_NAME_HINTS):
+        return "education"
+    if any(h in d for h in _COMMUNITY_NAME_HINTS):
+        return "community"
+    return "commercial"
+
 
 # ──────────────────────────────────────────────────────────────────────────────
 # HELPERS
@@ -338,6 +377,7 @@ def make_job(source, title, url, platform, category="marketing",
         "url":          url,
         "platform":     platform,
         "category":     category,
+        "genre":        classify_genre(source),
         "match_reason": match_reason,
         "posted_date":  posted,
         "first_seen":   datetime.now().strftime("%Y-%m-%d"),
@@ -911,8 +951,8 @@ def scrape_jbu(url, name):
 
 
 def scrape_careersnwa(url, name, location=""):
-    """Generic scraper for talent.careersnwa.com company pages and the
-    platform-wide job function feed — server-rendered, plain requests work."""
+    """Scraper for a single talent.careersnwa.com company page — server-rendered,
+    plain requests work. `name` is the known employer for this page."""
     jobs = []
     try:
         r    = requests.get(url, headers=HEADERS, timeout=20)
@@ -934,6 +974,67 @@ def scrape_careersnwa(url, name, location=""):
     except Exception as e:
         log.error(f"{name} (CareersNWA): {e}")
     log.info(f"{name}: {len(jobs)} jobs")
+    return jobs
+
+
+_SLUG_HEX_RE = re.compile(r"^[0-9a-f]{6,}$", re.I)
+_SLUG_UUID_TAIL_RE = re.compile(
+    r"-[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$", re.I)
+_SLUG_SMALL_WORDS = {"of", "and", "the", "in", "on", "for", "at"}
+_SLUG_NAME_OVERRIDES = {
+    "uaf": "University of Arkansas",
+    "nwacc": "NWACC",
+    "jbu": "JBU",
+    "jb-hunt": "J.B. Hunt",
+    "arcbest": "ArcBest",
+}
+
+
+def _company_name_from_slug(slug):
+    """talent.careersnwa.com company slugs look like 'tyson-foods' or
+    'sps-commerce-2-30a3f118-afb2-...' (a trailing dedup UUID). Turn either
+    into a readable employer name so it can be shown as the actual company
+    instead of a generic 'CareersNWA' tag."""
+    if slug in _SLUG_NAME_OVERRIDES:
+        return _SLUG_NAME_OVERRIDES[slug]
+    slug = _SLUG_UUID_TAIL_RE.sub("", slug)
+    parts = [p for p in slug.split("-") if p]
+    while parts and _SLUG_HEX_RE.match(parts[-1]):
+        parts.pop()
+    if not parts:
+        return slug
+    return " ".join(p if p.lower() in _SLUG_SMALL_WORDS else p.capitalize() for p in parts)
+
+
+def scrape_careersnwa_regional():
+    """The platform-wide Marketing & Communications feed spans every employer
+    on CareersNWA, not just the ones hardcoded in CAREERSNWA_SOURCES — so each
+    job's real employer is parsed from its /companies/<slug>/jobs/... URL
+    rather than tagged with the feed's own name."""
+    label = "CareersNWA regional feed"
+    jobs = []
+    try:
+        r    = requests.get(CAREERSNWA_REGIONAL_FEED, headers=HEADERS, timeout=20)
+        soup = BeautifulSoup(r.text, "html.parser")
+        added = set()
+        for a in soup.find_all("a", href=True):
+            href  = a["href"]
+            title = a.get_text(strip=True)
+            if not title or len(title) < 5 or href in added:
+                continue
+            m = re.search(r"/companies/([^/]+)/jobs/", href)
+            if not m:
+                continue
+            added.add(href)
+            company  = _company_name_from_slug(m.group(1))
+            full_url = href if href.startswith("http") else "https://talent.careersnwa.com" + href
+            cat, reason = categorize(title)
+            if cat:
+                jobs.append(make_job(company, title, full_url, "CareersNWA",
+                                      category=cat, match_reason=reason))
+    except Exception as e:
+        log.error(f"{label}: {e}")
+    log.info(f"{label}: {len(jobs)} jobs")
     return jobs
 
 
@@ -1038,19 +1139,21 @@ def scrape_all():
     for s in CAREERSNWA_SOURCES:
         all_jobs.extend(_safe(scrape_careersnwa, s["url"], s["name"], s.get("location", ""),
                                label=s["name"], pause=1))
-    all_jobs.extend(_safe(scrape_careersnwa, CAREERSNWA_REGIONAL_FEED,
-                           "CareersNWA — Marketing & Comms (regional)", "",
-                           label="CareersNWA regional feed", pause=1))
+    all_jobs.extend(_safe(scrape_careersnwa_regional, label="CareersNWA regional feed", pause=1))
 
     log.info("── Aggregators ──")
     all_jobs.extend(_safe(scrape_adzuna, pause=2))
 
-    # Deduplicate by ID
+    # Deduplicate by ID, and drop remote postings that slipped past the
+    # title-based "remote" exclude (e.g. remote noted only in the location field)
     seen, unique = set(), []
     for j in all_jobs:
-        if j["id"] not in seen:
-            seen.add(j["id"])
-            unique.append(j)
+        if j["id"] in seen:
+            continue
+        if "remote" in (j.get("location", "") or "").lower():
+            continue
+        seen.add(j["id"])
+        unique.append(j)
 
     by_source = {}
     for j in unique:

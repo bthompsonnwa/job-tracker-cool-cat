@@ -123,7 +123,8 @@ MARKETING_KEYWORDS = [
     "social media coordinator", "social media specialist", "social media manager",
     "digital marketing", "brand coordinator", "brand specialist", "brand manager",
     "creative services coordinator", "publications coordinator", "publications specialist",
-    "graphic designer", "graphic design coordinator", "web content coordinator",
+    "graphic designer", "graphic design coordinator", "graphic design specialist",
+    "graphic artist", "web content coordinator",
     "engagement coordinator", "community engagement coordinator",
     "community outreach coordinator", "outreach coordinator", "outreach specialist",
     "outreach manager", "events specialist",
@@ -1149,11 +1150,14 @@ def scrape_all():
     all_jobs.extend(_safe(scrape_adzuna, pause=2))
 
     # Deduplicate by ID, drop remote postings that slipped past the title-based
-    # "remote" exclude (e.g. remote noted only in the location field), and drop
-    # any library/hybrid match from a K-12 school district — Arkansas requires
-    # a teaching license for those regardless of how the title is worded (a
-    # bare "Librarian" posting from a district wouldn't be caught by the
-    # "school librarian"/"library media specialist" keyword excludes above).
+    # "remote" exclude (e.g. remote noted only in the location field), drop any
+    # library/hybrid match from a K-12 school district — Arkansas requires a
+    # teaching license for those regardless of how the title is worded (a bare
+    # "Librarian" posting from a district wouldn't be caught by the "school
+    # librarian"/"library media specialist" keyword excludes above) — and drop
+    # graphic design matches from commercial (private-company) employers: those
+    # are meant to be shared with a graphic-design friend for education/
+    # community-sector roles specifically, not corporate ones.
     seen, unique = set(), []
     for j in all_jobs:
         if j["id"] in seen:
@@ -1161,6 +1165,8 @@ def scrape_all():
         if "remote" in (j.get("location", "") or "").lower():
             continue
         if SOURCE_TYPE_BY_NAME.get(j["district"]) == "school" and j["category"] in ("library", "hybrid"):
+            continue
+        if j["genre"] == "commercial" and "graphic" in (j.get("match_reason") or ""):
             continue
         seen.add(j["id"])
         unique.append(j)

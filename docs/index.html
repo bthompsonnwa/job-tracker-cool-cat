@@ -239,7 +239,10 @@ async function loadJobs() {
     buildFilters();
     renderAll();
     document.getElementById("last-updated").textContent =
-      data.last_updated ? "Last updated: " + new Date(data.last_updated).toLocaleString() : "";
+      data.last_updated ? "Last updated: " + new Date(data.last_updated).toLocaleString('en-US', {
+        timeZone: 'America/Chicago', year: 'numeric', month: 'short', day: 'numeric',
+        hour: 'numeric', minute: '2-digit', timeZoneName: 'short'
+      }) : "";
   } catch(e) {
     document.getElementById("main-content").innerHTML =
       `<div class="job-list"><div class="empty">${ICONS.alert}<h3>Couldn't load jobs.json</h3></div></div>`;

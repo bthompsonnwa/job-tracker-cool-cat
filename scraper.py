@@ -10,7 +10,7 @@ Dashboard only (no email) — updates docs/jobs.json for GitHub Pages.
 import requests
 from bs4 import BeautifulSoup
 import json, os, hashlib, logging, re, time
-from datetime import datetime
+from datetime import datetime, timezone
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 log = logging.getLogger(__name__)
@@ -1195,7 +1195,7 @@ def main():
     brand_new = find_new_jobs(old_data, new_jobs)
     log.info(f"New since last run: {len(brand_new)}")
     save_jobs({
-        "last_updated": datetime.now().isoformat(timespec="minutes"),
+        "last_updated": datetime.now(timezone.utc).isoformat(timespec="minutes"),
         "jobs":    new_jobs,
         "sources": ALL_SOURCES,
     })

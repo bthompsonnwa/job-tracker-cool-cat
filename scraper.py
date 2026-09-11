@@ -104,8 +104,8 @@ LIBRARY_KEYWORDS = [
     "cataloging librarian", "cataloger", "archivist", "archives",
     "special collections", "acquisitions librarian", "instruction librarian",
     "research librarian", "digital services librarian", "systems librarian",
-    "electronic resources librarian", "library media specialist", "school librarian",
-    "media specialist", "library services coordinator", "public services librarian",
+    "electronic resources librarian",
+    "library services coordinator", "public services librarian",
     "library program coordinator", "business librarian", "rare books",
 ]
 
@@ -141,6 +141,10 @@ HARD_EXCLUDE_KEYWORDS = [
     # Pre-professional / entry-level library & clerical
     "library page", "shelver", "library clerk", "circulation clerk", "library aide",
     "office clerk", "file clerk", "data entry clerk", "data entry",
+    # K-12 school library roles — require an Arkansas teaching license, which
+    # this candidate doesn't have (see also the school-source filter in
+    # scrape_all(), which catches these even under a bare "Librarian" title)
+    "library media specialist", "school librarian", "teacher librarian", "teacher-librarian",
     # Generic customer service / retail / call center
     "cashier", "retail associate", "retail sales", "sales associate",
     "sales representative", "account executive", "call center", "call-center",
@@ -1144,13 +1148,19 @@ def scrape_all():
     log.info("── Aggregators ──")
     all_jobs.extend(_safe(scrape_adzuna, pause=2))
 
-    # Deduplicate by ID, and drop remote postings that slipped past the
-    # title-based "remote" exclude (e.g. remote noted only in the location field)
+    # Deduplicate by ID, drop remote postings that slipped past the title-based
+    # "remote" exclude (e.g. remote noted only in the location field), and drop
+    # any library/hybrid match from a K-12 school district — Arkansas requires
+    # a teaching license for those regardless of how the title is worded (a
+    # bare "Librarian" posting from a district wouldn't be caught by the
+    # "school librarian"/"library media specialist" keyword excludes above).
     seen, unique = set(), []
     for j in all_jobs:
         if j["id"] in seen:
             continue
         if "remote" in (j.get("location", "") or "").lower():
+            continue
+        if SOURCE_TYPE_BY_NAME.get(j["district"]) == "school" and j["category"] in ("library", "hybrid"):
             continue
         seen.add(j["id"])
         unique.append(j)

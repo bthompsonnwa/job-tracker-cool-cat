@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-14T17:09+00:00",
+  "last_updated": "2026-09-15T15:48+00:00",
   "jobs": [
     {
       "id": "e0b8d12efad0",
@@ -11,7 +11,7 @@
       "category": "marketing",
       "genre": "community",
       "match_reason": "marketing manager",
-      "posted_date": "Posted 10 Days Ago",
+      "posted_date": "Posted 11 Days Ago",
       "first_seen": "2026-09-11"
     },
     {
@@ -102,19 +102,6 @@
       "category": "marketing",
       "genre": "commercial",
       "match_reason": "brand manager",
-      "posted_date": "",
-      "first_seen": "2026-09-11"
-    },
-    {
-      "id": "42adaf4643d6",
-      "title": "Community Outreach & Communications Coordinator",
-      "district": "Community Clinic",
-      "location": "",
-      "url": "https://talent.careersnwa.com/companies/community-clinic/jobs/92122841-community-outreach-communications-coordinator#content",
-      "platform": "CareersNWA",
-      "category": "marketing",
-      "genre": "commercial",
-      "match_reason": "communications coordinator",
       "posted_date": "",
       "first_seen": "2026-09-11"
     },

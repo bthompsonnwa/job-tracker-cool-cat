@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-15T15:48+00:00",
+  "last_updated": "2026-09-16T15:40+00:00",
   "jobs": [
     {
       "id": "e0b8d12efad0",
@@ -11,7 +11,7 @@
       "category": "marketing",
       "genre": "community",
       "match_reason": "marketing manager",
-      "posted_date": "Posted 11 Days Ago",
+      "posted_date": "Posted 12 Days Ago",
       "first_seen": "2026-09-11"
     },
     {
@@ -93,19 +93,6 @@
       "first_seen": "2026-09-11"
     },
     {
-      "id": "d711ce170192",
-      "title": "Associate Brand Manager",
-      "district": "Tyson Foods",
-      "location": "",
-      "url": "https://talent.careersnwa.com/companies/tyson-foods/jobs/92248185-associate-brand-manager#content",
-      "platform": "CareersNWA",
-      "category": "marketing",
-      "genre": "commercial",
-      "match_reason": "brand manager",
-      "posted_date": "",
-      "first_seen": "2026-09-11"
-    },
-    {
       "id": "284b3222ee75",
       "title": "Talent Acquisition Marketing Specialist",
       "district": "J B Hunt Transport",
@@ -117,6 +104,19 @@
       "match_reason": "marketing specialist",
       "posted_date": "",
       "first_seen": "2026-09-14"
+    },
+    {
+      "id": "67f4ccb846f1",
+      "title": "Marketing Communications Specialist - Internal Communications",
+      "district": "J B Hunt Transport",
+      "location": "",
+      "url": "https://talent.careersnwa.com/companies/j-b-hunt-transport/jobs/90815980-marketing-communications-specialist-internal-communications#content",
+      "platform": "CareersNWA",
+      "category": "marketing",
+      "genre": "commercial",
+      "match_reason": "communications specialist",
+      "posted_date": "",
+      "first_seen": "2026-09-16"
     }
   ],
   "sources": [

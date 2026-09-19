@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-18T15:18+00:00",
+  "last_updated": "2026-09-19T14:56+00:00",
   "jobs": [
     {
       "id": "e0b8d12efad0",
@@ -11,8 +11,21 @@
       "category": "marketing",
       "genre": "community",
       "match_reason": "marketing manager",
-      "posted_date": "Posted 14 Days Ago",
+      "posted_date": "Posted 15 Days Ago",
       "first_seen": "2026-09-11"
+    },
+    {
+      "id": "4b0a0e3ced6d",
+      "title": "Social Media Manager & Content Creator",
+      "district": "Benton Lane",
+      "location": "",
+      "url": "https://talent.careersnwa.com/companies/benton-lane/jobs/93661073-social-media-manager-content-creator#content",
+      "platform": "CareersNWA",
+      "category": "marketing",
+      "genre": "commercial",
+      "match_reason": "content creator",
+      "posted_date": "",
+      "first_seen": "2026-09-19"
     },
     {
       "id": "904658635d81",

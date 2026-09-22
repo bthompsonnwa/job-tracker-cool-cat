@@ -1,6 +1,19 @@
 {
-  "last_updated": "2026-09-21T17:18+00:00",
+  "last_updated": "2026-09-22T15:50+00:00",
   "jobs": [
+    {
+      "id": "4004ee469cc7",
+      "title": "Technical Services Librarian",
+      "district": "University of Arkansas (UAF)",
+      "location": "Fayetteville, AR",
+      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville-AR/Technical-Services-Librarian_R0091669",
+      "platform": "Workday",
+      "category": "library",
+      "genre": "education",
+      "match_reason": "librarian",
+      "posted_date": "Posted Today",
+      "first_seen": "2026-09-22"
+    },
     {
       "id": "e0b8d12efad0",
       "title": "Marketing Manager",
@@ -11,7 +24,7 @@
       "category": "marketing",
       "genre": "community",
       "match_reason": "marketing manager",
-      "posted_date": "Posted 17 Days Ago",
+      "posted_date": "Posted 18 Days Ago",
       "first_seen": "2026-09-11"
     },
     {
@@ -91,6 +104,19 @@
       "match_reason": "marketing manager",
       "posted_date": "",
       "first_seen": "2026-09-11"
+    },
+    {
+      "id": "cbe545b709f1",
+      "title": "Brand Manager",
+      "district": "Tyson Foods",
+      "location": "",
+      "url": "https://talent.careersnwa.com/companies/tyson-foods/jobs/92248124-brand-manager#content",
+      "platform": "CareersNWA",
+      "category": "marketing",
+      "genre": "commercial",
+      "match_reason": "brand manager",
+      "posted_date": "",
+      "first_seen": "2026-09-22"
     }
   ],
   "sources": [

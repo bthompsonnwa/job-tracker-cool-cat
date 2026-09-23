@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-22T15:50+00:00",
+  "last_updated": "2026-09-23T15:41+00:00",
   "jobs": [
     {
       "id": "4004ee469cc7",
@@ -11,7 +11,7 @@
       "category": "library",
       "genre": "education",
       "match_reason": "librarian",
-      "posted_date": "Posted Today",
+      "posted_date": "Posted Yesterday",
       "first_seen": "2026-09-22"
     },
     {
@@ -24,7 +24,7 @@
       "category": "marketing",
       "genre": "community",
       "match_reason": "marketing manager",
-      "posted_date": "Posted 18 Days Ago",
+      "posted_date": "Posted 19 Days Ago",
       "first_seen": "2026-09-11"
     },
     {

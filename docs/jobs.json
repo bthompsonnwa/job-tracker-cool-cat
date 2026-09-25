@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-24T16:01+00:00",
+  "last_updated": "2026-09-25T16:02+00:00",
   "jobs": [
     {
       "id": "4004ee469cc7",
@@ -11,7 +11,7 @@
       "category": "library",
       "genre": "education",
       "match_reason": "librarian",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-09-22"
     },
     {
@@ -24,7 +24,7 @@
       "category": "marketing",
       "genre": "community",
       "match_reason": "marketing manager",
-      "posted_date": "Posted 20 Days Ago",
+      "posted_date": "Posted 21 Days Ago",
       "first_seen": "2026-09-11"
     },
     {
@@ -37,19 +37,6 @@
       "category": "marketing",
       "genre": "commercial",
       "match_reason": "content marketing",
-      "posted_date": "",
-      "first_seen": "2026-09-24"
-    },
-    {
-      "id": "4054b9e763e3",
-      "title": "Senior Associate, Digital Marketing",
-      "district": "Kpmg Us 2",
-      "location": "",
-      "url": "https://talent.careersnwa.com/companies/kpmg-us-2/jobs/94287643-senior-associate-digital-marketing#content",
-      "platform": "CareersNWA",
-      "category": "marketing",
-      "genre": "commercial",
-      "match_reason": "digital marketing",
       "posted_date": "",
       "first_seen": "2026-09-24"
     },
@@ -130,19 +117,6 @@
       "match_reason": "marketing manager",
       "posted_date": "",
       "first_seen": "2026-09-11"
-    },
-    {
-      "id": "cbe545b709f1",
-      "title": "Brand Manager",
-      "district": "Tyson Foods",
-      "location": "",
-      "url": "https://talent.careersnwa.com/companies/tyson-foods/jobs/92248124-brand-manager#content",
-      "platform": "CareersNWA",
-      "category": "marketing",
-      "genre": "commercial",
-      "match_reason": "brand manager",
-      "posted_date": "",
-      "first_seen": "2026-09-22"
     }
   ],
   "sources": [

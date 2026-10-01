@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-30T17:06+00:00",
+  "last_updated": "2026-10-01T17:36+00:00",
   "jobs": [
     {
       "id": "4004ee469cc7",
@@ -11,7 +11,7 @@
       "category": "library",
       "genre": "education",
       "match_reason": "librarian",
-      "posted_date": "Posted 5 Days Ago",
+      "posted_date": "Posted 6 Days Ago",
       "first_seen": "2026-09-22"
     },
     {
@@ -24,7 +24,7 @@
       "category": "marketing",
       "genre": "education",
       "match_reason": "special events coordinator",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-09-28"
     },
     {
@@ -37,7 +37,7 @@
       "category": "marketing",
       "genre": "community",
       "match_reason": "marketing manager",
-      "posted_date": "Posted 26 Days Ago",
+      "posted_date": "Posted 27 Days Ago",
       "first_seen": "2026-09-11"
     },
     {
@@ -91,32 +91,6 @@
       "match_reason": "communications specialist",
       "posted_date": "",
       "first_seen": "2026-09-26"
-    },
-    {
-      "id": "de9398e54fff",
-      "title": "Sr. Content Marketing Strategist",
-      "district": "Sps Commerce 2",
-      "location": "",
-      "url": "https://talent.careersnwa.com/companies/sps-commerce-2-30a3f118-afb2-45bb-b8e8-a09630cddd50/jobs/94414165-sr-content-marketing-strategist#content",
-      "platform": "CareersNWA",
-      "category": "marketing",
-      "genre": "commercial",
-      "match_reason": "content marketing",
-      "posted_date": "",
-      "first_seen": "2026-09-24"
-    },
-    {
-      "id": "4b0a0e3ced6d",
-      "title": "Social Media Manager & Content Creator",
-      "district": "Benton Lane",
-      "location": "",
-      "url": "https://talent.careersnwa.com/companies/benton-lane/jobs/93661073-social-media-manager-content-creator#content",
-      "platform": "CareersNWA",
-      "category": "marketing",
-      "genre": "commercial",
-      "match_reason": "content creator",
-      "posted_date": "",
-      "first_seen": "2026-09-19"
     }
   ],
   "sources": [

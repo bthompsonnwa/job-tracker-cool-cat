@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-02T16:56+00:00",
+  "last_updated": "2026-10-03T15:19+00:00",
   "jobs": [
     {
       "id": "4004ee469cc7",
@@ -11,7 +11,7 @@
       "category": "library",
       "genre": "education",
       "match_reason": "librarian",
-      "posted_date": "Posted 7 Days Ago",
+      "posted_date": "Posted 8 Days Ago",
       "first_seen": "2026-09-22"
     },
     {
@@ -24,7 +24,7 @@
       "category": "marketing",
       "genre": "education",
       "match_reason": "special events coordinator",
-      "posted_date": "Posted 4 Days Ago",
+      "posted_date": "Posted 5 Days Ago",
       "first_seen": "2026-09-28"
     },
     {
@@ -37,7 +37,7 @@
       "category": "marketing",
       "genre": "community",
       "match_reason": "marketing manager",
-      "posted_date": "Posted 28 Days Ago",
+      "posted_date": "Posted 29 Days Ago",
       "first_seen": "2026-09-11"
     },
     {
@@ -78,19 +78,6 @@
       "match_reason": "content manager",
       "posted_date": "",
       "first_seen": "2026-09-30"
-    },
-    {
-      "id": "1b0259dbe9de",
-      "title": "Marketing and Development Communications Specialist",
-      "district": "University of Arkansas",
-      "location": "",
-      "url": "https://talent.careersnwa.com/companies/university-of-arkansas/jobs/94846740-marketing-and-development-communications-specialist#content",
-      "platform": "CareersNWA",
-      "category": "marketing",
-      "genre": "education",
-      "match_reason": "communications specialist",
-      "posted_date": "",
-      "first_seen": "2026-09-26"
     }
   ],
   "sources": [

@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-05T19:51+00:00",
+  "last_updated": "2026-10-06T17:31+00:00",
   "jobs": [
     {
       "id": "4004ee469cc7",
@@ -11,7 +11,7 @@
       "category": "library",
       "genre": "education",
       "match_reason": "librarian",
-      "posted_date": "Posted 10 Days Ago",
+      "posted_date": "Posted 11 Days Ago",
       "first_seen": "2026-09-22"
     },
     {
@@ -24,7 +24,7 @@
       "category": "marketing",
       "genre": "education",
       "match_reason": "special events coordinator",
-      "posted_date": "Posted 7 Days Ago",
+      "posted_date": "Posted 8 Days Ago",
       "first_seen": "2026-09-28"
     },
     {
@@ -39,6 +39,58 @@
       "match_reason": "marketing manager",
       "posted_date": "Posted 30+ Days Ago",
       "first_seen": "2026-09-11"
+    },
+    {
+      "id": "40919f3291ac",
+      "title": "Communications Manager- ICHI (Springdale, AR))",
+      "district": "University of Arkansas for Medical Sciences",
+      "location": "",
+      "url": "https://talent.careersnwa.com/companies/university-of-arkansas-for-medical-sciences/jobs/95265711-communications-manager-ichi-springdale-ar#content",
+      "platform": "CareersNWA",
+      "category": "marketing",
+      "genre": "education",
+      "match_reason": "communications manager",
+      "posted_date": "",
+      "first_seen": "2026-10-06"
+    },
+    {
+      "id": "5011e7e9848c",
+      "title": "Communications Manager- ICHI (Springdale, AR))",
+      "district": "University of Arkansas",
+      "location": "",
+      "url": "https://talent.careersnwa.com/companies/university-of-arkansas/jobs/95252448-communications-manager-ichi-springdale-ar#content",
+      "platform": "CareersNWA",
+      "category": "marketing",
+      "genre": "education",
+      "match_reason": "communications manager",
+      "posted_date": "",
+      "first_seen": "2026-10-06"
+    },
+    {
+      "id": "a60f8c39ef5f",
+      "title": "Content Manager / Senior Content Manager",
+      "district": "the Harvest Group 2",
+      "location": "",
+      "url": "https://talent.careersnwa.com/companies/the-harvest-group-2/jobs/95189201-content-manager-senior-content-manager#content",
+      "platform": "CareersNWA",
+      "category": "marketing",
+      "genre": "commercial",
+      "match_reason": "content manager",
+      "posted_date": "",
+      "first_seen": "2026-10-06"
+    },
+    {
+      "id": "1b0259dbe9de",
+      "title": "Marketing and Development Communications Specialist",
+      "district": "University of Arkansas",
+      "location": "",
+      "url": "https://talent.careersnwa.com/companies/university-of-arkansas/jobs/94846740-marketing-and-development-communications-specialist#content",
+      "platform": "CareersNWA",
+      "category": "marketing",
+      "genre": "education",
+      "match_reason": "communications specialist",
+      "posted_date": "",
+      "first_seen": "2026-10-06"
     }
   ],
   "sources": [

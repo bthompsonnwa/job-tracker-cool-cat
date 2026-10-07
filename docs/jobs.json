@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-06T17:31+00:00",
+  "last_updated": "2026-10-07T18:03+00:00",
   "jobs": [
     {
       "id": "4004ee469cc7",
@@ -11,7 +11,7 @@
       "category": "library",
       "genre": "education",
       "match_reason": "librarian",
-      "posted_date": "Posted 11 Days Ago",
+      "posted_date": "Posted 12 Days Ago",
       "first_seen": "2026-09-22"
     },
     {
@@ -24,7 +24,7 @@
       "category": "marketing",
       "genre": "education",
       "match_reason": "special events coordinator",
-      "posted_date": "Posted 8 Days Ago",
+      "posted_date": "Posted 9 Days Ago",
       "first_seen": "2026-09-28"
     },
     {
@@ -39,6 +39,32 @@
       "match_reason": "marketing manager",
       "posted_date": "Posted 30+ Days Ago",
       "first_seen": "2026-09-11"
+    },
+    {
+      "id": "f31b9569d8d1",
+      "title": "Marketing & Communications ManagerFeatured",
+      "district": "Hta 2",
+      "location": "",
+      "url": "https://talent.careersnwa.com/companies/hta-2-f4b34bc8-fd25-4034-9db0-ec5bec7ab454/jobs/96041764-marketing-communications-manager#content",
+      "platform": "CareersNWA",
+      "category": "marketing",
+      "genre": "commercial",
+      "match_reason": "marketing & communications",
+      "posted_date": "",
+      "first_seen": "2026-10-07"
+    },
+    {
+      "id": "3b06ec6298de",
+      "title": "Marketing Manager",
+      "district": "Kpmg Us 2",
+      "location": "",
+      "url": "https://talent.careersnwa.com/companies/kpmg-us-2/jobs/95938649-marketing-manager#content",
+      "platform": "CareersNWA",
+      "category": "marketing",
+      "genre": "commercial",
+      "match_reason": "marketing manager",
+      "posted_date": "",
+      "first_seen": "2026-10-07"
     },
     {
       "id": "40919f3291ac",
@@ -76,19 +102,6 @@
       "category": "marketing",
       "genre": "commercial",
       "match_reason": "content manager",
-      "posted_date": "",
-      "first_seen": "2026-10-06"
-    },
-    {
-      "id": "1b0259dbe9de",
-      "title": "Marketing and Development Communications Specialist",
-      "district": "University of Arkansas",
-      "location": "",
-      "url": "https://talent.careersnwa.com/companies/university-of-arkansas/jobs/94846740-marketing-and-development-communications-specialist#content",
-      "platform": "CareersNWA",
-      "category": "marketing",
-      "genre": "education",
-      "match_reason": "communications specialist",
       "posted_date": "",
       "first_seen": "2026-10-06"
     }

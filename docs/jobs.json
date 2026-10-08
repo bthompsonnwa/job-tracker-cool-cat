@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-07T18:03+00:00",
+  "last_updated": "2026-10-08T18:05+00:00",
   "jobs": [
     {
       "id": "4004ee469cc7",
@@ -11,7 +11,7 @@
       "category": "library",
       "genre": "education",
       "match_reason": "librarian",
-      "posted_date": "Posted 12 Days Ago",
+      "posted_date": "Posted 13 Days Ago",
       "first_seen": "2026-09-22"
     },
     {
@@ -24,7 +24,7 @@
       "category": "marketing",
       "genre": "education",
       "match_reason": "special events coordinator",
-      "posted_date": "Posted 9 Days Ago",
+      "posted_date": "Posted 10 Days Ago",
       "first_seen": "2026-09-28"
     },
     {
@@ -50,19 +50,6 @@
       "category": "marketing",
       "genre": "commercial",
       "match_reason": "marketing & communications",
-      "posted_date": "",
-      "first_seen": "2026-10-07"
-    },
-    {
-      "id": "3b06ec6298de",
-      "title": "Marketing Manager",
-      "district": "Kpmg Us 2",
-      "location": "",
-      "url": "https://talent.careersnwa.com/companies/kpmg-us-2/jobs/95938649-marketing-manager#content",
-      "platform": "CareersNWA",
-      "category": "marketing",
-      "genre": "commercial",
-      "match_reason": "marketing manager",
       "posted_date": "",
       "first_seen": "2026-10-07"
     },

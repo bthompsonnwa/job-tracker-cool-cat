@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-11T16:53+00:00",
+  "last_updated": "2026-10-12T20:31+00:00",
   "jobs": [
     {
       "id": "b8c4cdbf2d3c",
@@ -11,7 +11,7 @@
       "category": "marketing",
       "genre": "education",
       "match_reason": "special events coordinator",
-      "posted_date": "Posted 13 Days Ago",
+      "posted_date": "Posted 14 Days Ago",
       "first_seen": "2026-09-28"
     },
     {
@@ -65,6 +65,19 @@
       "match_reason": "communications manager",
       "posted_date": "",
       "first_seen": "2026-10-06"
+    },
+    {
+      "id": "a60f8c39ef5f",
+      "title": "Content Manager / Senior Content Manager",
+      "district": "the Harvest Group 2",
+      "location": "",
+      "url": "https://talent.careersnwa.com/companies/the-harvest-group-2/jobs/95189201-content-manager-senior-content-manager#content",
+      "platform": "CareersNWA",
+      "category": "marketing",
+      "genre": "commercial",
+      "match_reason": "content manager",
+      "posted_date": "",
+      "first_seen": "2026-10-12"
     }
   ],
   "sources": [

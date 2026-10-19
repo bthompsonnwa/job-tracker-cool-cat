@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-18T15:00+00:00",
+  "last_updated": "2026-10-19T17:52+00:00",
   "jobs": [
     {
       "id": "7cec15badef1",
@@ -11,7 +11,7 @@
       "category": "marketing",
       "genre": "community",
       "match_reason": "marketing and communications",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-10-16"
     },
     {
@@ -39,6 +39,45 @@
       "match_reason": "marketing & communications",
       "posted_date": "",
       "first_seen": "2026-10-07"
+    },
+    {
+      "id": "9a413df1df11",
+      "title": "Manager, Content Marketing (Risk)",
+      "district": "Kpmg Us 2",
+      "location": "",
+      "url": "https://talent.careersnwa.com/companies/kpmg-us-2/jobs/97249423-manager-content-marketing-risk#content",
+      "platform": "CareersNWA",
+      "category": "marketing",
+      "genre": "commercial",
+      "match_reason": "content marketing",
+      "posted_date": "",
+      "first_seen": "2026-10-19"
+    },
+    {
+      "id": "d7d046387628",
+      "title": "Manager, Content Marketing (Front Office/Ops/HR)",
+      "district": "Kpmg Us 2",
+      "location": "",
+      "url": "https://talent.careersnwa.com/companies/kpmg-us-2/jobs/97249100-manager-content-marketing-front-office-ops-hr#content",
+      "platform": "CareersNWA",
+      "category": "marketing",
+      "genre": "commercial",
+      "match_reason": "content marketing",
+      "posted_date": "",
+      "first_seen": "2026-10-19"
+    },
+    {
+      "id": "4cb90da716f4",
+      "title": "Manager, Content Marketing (Technology)",
+      "district": "Kpmg Us 2",
+      "location": "",
+      "url": "https://talent.careersnwa.com/companies/kpmg-us-2/jobs/97248365-manager-content-marketing-technology#content",
+      "platform": "CareersNWA",
+      "category": "marketing",
+      "genre": "commercial",
+      "match_reason": "content marketing",
+      "posted_date": "",
+      "first_seen": "2026-10-19"
     },
     {
       "id": "d0e8a105e586",

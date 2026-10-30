@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-29T17:42+00:00",
+  "last_updated": "2026-10-30T17:20+00:00",
   "jobs": [
     {
       "id": "1e10e842bf7e",
@@ -37,7 +37,7 @@
       "category": "marketing",
       "genre": "education",
       "match_reason": "marketing specialist",
-      "posted_date": "Posted 3 Days Ago",
+      "posted_date": "Posted 4 Days Ago",
       "first_seen": "2026-10-26"
     },
     {
@@ -50,7 +50,7 @@
       "category": "marketing",
       "genre": "community",
       "match_reason": "public relations coordinator",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-10-28"
     },
     {
@@ -63,8 +63,21 @@
       "category": "marketing",
       "genre": "community",
       "match_reason": "marketing and communications",
-      "posted_date": "Posted 13 Days Ago",
+      "posted_date": "Posted 14 Days Ago",
       "first_seen": "2026-10-16"
+    },
+    {
+      "id": "e0b8d12efad0",
+      "title": "Marketing Manager",
+      "district": "Crystal Bridges / AWE",
+      "location": "Bentonville, AR",
+      "url": "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness/job/Bentonville-AR/Marketing-Manager_JR2510",
+      "platform": "Workday",
+      "category": "marketing",
+      "genre": "community",
+      "match_reason": "marketing manager",
+      "posted_date": "Posted 30+ Days Ago",
+      "first_seen": "2026-10-30"
     },
     {
       "id": "03cf1f516289",
@@ -184,17 +197,17 @@
       "first_seen": "2026-10-25"
     },
     {
-      "id": "d0dda614f718",
-      "title": "Manager, Content Marketing (Exec & Transactions)",
+      "id": "6a236a84d4c8",
+      "title": "Associate, Digital Marketing",
       "district": "Kpmg Us 2",
       "location": "",
-      "url": "https://talent.careersnwa.com/companies/kpmg-us-2/jobs/97567955-manager-content-marketing-exec-transactions#content",
+      "url": "https://talent.careersnwa.com/companies/kpmg-us-2/jobs/97567952-associate-digital-marketing#content",
       "platform": "CareersNWA",
       "category": "marketing",
       "genre": "commercial",
-      "match_reason": "content marketing",
+      "match_reason": "digital marketing",
       "posted_date": "",
-      "first_seen": "2026-10-29"
+      "first_seen": "2026-10-30"
     },
     {
       "id": "01504af1967f",
@@ -221,45 +234,6 @@
       "match_reason": "brand manager",
       "posted_date": "",
       "first_seen": "2026-10-21"
-    },
-    {
-      "id": "9a413df1df11",
-      "title": "Manager, Content Marketing (Risk)",
-      "district": "Kpmg Us 2",
-      "location": "",
-      "url": "https://talent.careersnwa.com/companies/kpmg-us-2/jobs/97249423-manager-content-marketing-risk#content",
-      "platform": "CareersNWA",
-      "category": "marketing",
-      "genre": "commercial",
-      "match_reason": "content marketing",
-      "posted_date": "",
-      "first_seen": "2026-10-29"
-    },
-    {
-      "id": "d8f2fa7eee19",
-      "title": "Manager, Content Marketing (Tax & Legal)",
-      "district": "Kpmg Us 2",
-      "location": "",
-      "url": "https://talent.careersnwa.com/companies/kpmg-us-2/jobs/97248870-manager-content-marketing-tax-legal#content",
-      "platform": "CareersNWA",
-      "category": "marketing",
-      "genre": "commercial",
-      "match_reason": "content marketing",
-      "posted_date": "",
-      "first_seen": "2026-10-29"
-    },
-    {
-      "id": "ddd293af8ec3",
-      "title": "Manager, Content Marketing (Finance)",
-      "district": "Kpmg Us 2",
-      "location": "",
-      "url": "https://talent.careersnwa.com/companies/kpmg-us-2/jobs/97248459-manager-content-marketing-finance#content",
-      "platform": "CareersNWA",
-      "category": "marketing",
-      "genre": "commercial",
-      "match_reason": "content marketing",
-      "posted_date": "",
-      "first_seen": "2026-10-29"
     }
   ],
   "sources": [

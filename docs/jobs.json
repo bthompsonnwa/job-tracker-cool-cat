@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-30T17:20+00:00",
+  "last_updated": "2026-10-31T16:25+00:00",
   "jobs": [
     {
       "id": "1e10e842bf7e",
@@ -37,7 +37,7 @@
       "category": "marketing",
       "genre": "education",
       "match_reason": "marketing specialist",
-      "posted_date": "Posted 4 Days Ago",
+      "posted_date": "Posted 5 Days Ago",
       "first_seen": "2026-10-26"
     },
     {
@@ -50,7 +50,7 @@
       "category": "marketing",
       "genre": "community",
       "match_reason": "public relations coordinator",
-      "posted_date": "Posted 3 Days Ago",
+      "posted_date": "Posted 4 Days Ago",
       "first_seen": "2026-10-28"
     },
     {
@@ -63,7 +63,7 @@
       "category": "marketing",
       "genre": "community",
       "match_reason": "marketing and communications",
-      "posted_date": "Posted 14 Days Ago",
+      "posted_date": "Posted 15 Days Ago",
       "first_seen": "2026-10-16"
     },
     {
@@ -197,17 +197,17 @@
       "first_seen": "2026-10-25"
     },
     {
-      "id": "6a236a84d4c8",
-      "title": "Associate, Digital Marketing",
+      "id": "d0dda614f718",
+      "title": "Manager, Content Marketing (Exec & Transactions)",
       "district": "Kpmg Us 2",
       "location": "",
-      "url": "https://talent.careersnwa.com/companies/kpmg-us-2/jobs/97567952-associate-digital-marketing#content",
+      "url": "https://talent.careersnwa.com/companies/kpmg-us-2/jobs/97567955-manager-content-marketing-exec-transactions#content",
       "platform": "CareersNWA",
       "category": "marketing",
       "genre": "commercial",
-      "match_reason": "digital marketing",
+      "match_reason": "content marketing",
       "posted_date": "",
-      "first_seen": "2026-10-30"
+      "first_seen": "2026-10-31"
     },
     {
       "id": "01504af1967f",
@@ -219,19 +219,6 @@
       "category": "marketing",
       "genre": "commercial",
       "match_reason": "marketing manager",
-      "posted_date": "",
-      "first_seen": "2026-10-21"
-    },
-    {
-      "id": "4e8507c14422",
-      "title": "Manager, Marketing- Employer Brand Manager",
-      "district": "Walmart",
-      "location": "",
-      "url": "https://talent.careersnwa.com/companies/walmart/jobs/97389110-manager-marketing-employer-brand-manager#content",
-      "platform": "CareersNWA",
-      "category": "marketing",
-      "genre": "commercial",
-      "match_reason": "brand manager",
       "posted_date": "",
       "first_seen": "2026-10-21"
     }

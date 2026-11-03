@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-02T20:58+00:00",
+  "last_updated": "2026-11-03T18:46+00:00",
   "jobs": [
     {
       "id": "1e10e842bf7e",
@@ -28,19 +28,6 @@
       "first_seen": "2026-10-26"
     },
     {
-      "id": "3fecd57ec34a",
-      "title": "Digital Marketing Specialist",
-      "district": "University of Arkansas (UAF)",
-      "location": "Fayetteville, AR",
-      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville-AR/Digital-Marketing-Specialist_R0092894",
-      "platform": "Workday",
-      "category": "marketing",
-      "genre": "education",
-      "match_reason": "marketing specialist",
-      "posted_date": "Posted 7 Days Ago",
-      "first_seen": "2026-10-26"
-    },
-    {
       "id": "a172c844a935",
       "title": "Public Relations Coordinator",
       "district": "Crystal Bridges / AWE",
@@ -50,7 +37,7 @@
       "category": "marketing",
       "genre": "community",
       "match_reason": "public relations coordinator",
-      "posted_date": "Posted 6 Days Ago",
+      "posted_date": "Posted 7 Days Ago",
       "first_seen": "2026-10-28"
     },
     {
@@ -63,7 +50,7 @@
       "category": "marketing",
       "genre": "community",
       "match_reason": "marketing and communications",
-      "posted_date": "Posted 17 Days Ago",
+      "posted_date": "Posted 18 Days Ago",
       "first_seen": "2026-10-16"
     },
     {
@@ -184,17 +171,30 @@
       "first_seen": "2026-10-25"
     },
     {
-      "id": "d0dda614f718",
-      "title": "Manager, Content Marketing (Exec & Transactions)",
-      "district": "Kpmg Us 2",
+      "id": "01504af1967f",
+      "title": "Manager, Marketing - Recruitment Marketing Manager",
+      "district": "Walmart",
       "location": "",
-      "url": "https://talent.careersnwa.com/companies/kpmg-us-2/jobs/97567955-manager-content-marketing-exec-transactions#content",
+      "url": "https://talent.careersnwa.com/companies/walmart/jobs/97535719-manager-marketing-recruitment-marketing-manager#content",
       "platform": "CareersNWA",
       "category": "marketing",
       "genre": "commercial",
-      "match_reason": "content marketing",
+      "match_reason": "marketing manager",
       "posted_date": "",
-      "first_seen": "2026-11-02"
+      "first_seen": "2026-11-03"
+    },
+    {
+      "id": "4e8507c14422",
+      "title": "Manager, Marketing- Employer Brand Manager",
+      "district": "Walmart",
+      "location": "",
+      "url": "https://talent.careersnwa.com/companies/walmart/jobs/97389110-manager-marketing-employer-brand-manager#content",
+      "platform": "CareersNWA",
+      "category": "marketing",
+      "genre": "commercial",
+      "match_reason": "brand manager",
+      "posted_date": "",
+      "first_seen": "2026-11-03"
     }
   ],
   "sources": [

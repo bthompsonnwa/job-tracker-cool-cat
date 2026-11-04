@@ -1,45 +1,6 @@
 {
-  "last_updated": "2026-11-03T18:46+00:00",
+  "last_updated": "2026-11-04T18:58+00:00",
   "jobs": [
-    {
-      "id": "1e10e842bf7e",
-      "title": "LIBRARY: Library Assistant II (Part-Time) - Teens",
-      "district": "Rogers (City)",
-      "location": "Rogers (City)",
-      "url": "https://www.rogersar.gov/Jobs.aspx?UniqueId=98&From=All&CommunityJobs=False&JobID=LIBRARY-Library-Assistant-II-PartTime-Te-239",
-      "platform": "CivicPlus",
-      "category": "library",
-      "genre": "community",
-      "match_reason": "library assistant",
-      "posted_date": "10/26/2026",
-      "first_seen": "2026-10-26"
-    },
-    {
-      "id": "87681cbda301",
-      "title": "Full\u00a0Descriptionfor LIBRARY: Library Assistant II (Part-Time) - Teens",
-      "district": "Rogers (City)",
-      "location": "Rogers (City)",
-      "url": "https://www.rogersar.gov/Jobs.aspx?UniqueId=98&From=All&CommunityJobs=False&JobID=LIBRARY-Library-Assistant-II-PartTime-Te-239",
-      "platform": "CivicPlus",
-      "category": "library",
-      "genre": "community",
-      "match_reason": "library assistant",
-      "posted_date": "10/26/2026",
-      "first_seen": "2026-10-26"
-    },
-    {
-      "id": "a172c844a935",
-      "title": "Public Relations Coordinator",
-      "district": "Crystal Bridges / AWE",
-      "location": "Bentonville, AR",
-      "url": "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness/job/Bentonville-AR/Public-Relations-Coordinator_JR2602",
-      "platform": "Workday",
-      "category": "marketing",
-      "genre": "community",
-      "match_reason": "public relations coordinator",
-      "posted_date": "Posted 7 Days Ago",
-      "first_seen": "2026-10-28"
-    },
     {
       "id": "7cec15badef1",
       "title": "Senior Administrative Assistant, Brand, Marketing and Communications",
@@ -50,7 +11,7 @@
       "category": "marketing",
       "genre": "community",
       "match_reason": "marketing and communications",
-      "posted_date": "Posted 18 Days Ago",
+      "posted_date": "Posted 19 Days Ago",
       "first_seen": "2026-10-16"
     },
     {
@@ -169,32 +130,6 @@
       "match_reason": "marketing manager",
       "posted_date": "",
       "first_seen": "2026-10-25"
-    },
-    {
-      "id": "01504af1967f",
-      "title": "Manager, Marketing - Recruitment Marketing Manager",
-      "district": "Walmart",
-      "location": "",
-      "url": "https://talent.careersnwa.com/companies/walmart/jobs/97535719-manager-marketing-recruitment-marketing-manager#content",
-      "platform": "CareersNWA",
-      "category": "marketing",
-      "genre": "commercial",
-      "match_reason": "marketing manager",
-      "posted_date": "",
-      "first_seen": "2026-11-03"
-    },
-    {
-      "id": "4e8507c14422",
-      "title": "Manager, Marketing- Employer Brand Manager",
-      "district": "Walmart",
-      "location": "",
-      "url": "https://talent.careersnwa.com/companies/walmart/jobs/97389110-manager-marketing-employer-brand-manager#content",
-      "platform": "CareersNWA",
-      "category": "marketing",
-      "genre": "commercial",
-      "match_reason": "brand manager",
-      "posted_date": "",
-      "first_seen": "2026-11-03"
     }
   ],
   "sources": [

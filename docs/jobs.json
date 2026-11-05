@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-04T18:58+00:00",
+  "last_updated": "2026-11-05T19:10+00:00",
   "jobs": [
     {
       "id": "7cec15badef1",
@@ -11,7 +11,7 @@
       "category": "marketing",
       "genre": "community",
       "match_reason": "marketing and communications",
-      "posted_date": "Posted 19 Days Ago",
+      "posted_date": "Posted 20 Days Ago",
       "first_seen": "2026-10-16"
     },
     {
@@ -54,19 +54,6 @@
       "first_seen": "2026-10-20"
     },
     {
-      "id": "da4892e4dccd",
-      "title": "Public Relations Coordinator",
-      "district": "Crystal Bridges Museum of American Art 2",
-      "location": "",
-      "url": "https://talent.careersnwa.com/companies/crystal-bridges-museum-of-american-art-2/jobs/98276101-public-relations-coordinator#content",
-      "platform": "CareersNWA",
-      "category": "marketing",
-      "genre": "community",
-      "match_reason": "public relations coordinator",
-      "posted_date": "",
-      "first_seen": "2026-10-29"
-    },
-    {
       "id": "89313bae0a6d",
       "title": "Marketing Manager",
       "district": "Bentonville Institute of Technology",
@@ -89,19 +76,6 @@
       "category": "marketing",
       "genre": "commercial",
       "match_reason": "marketing and communications",
-      "posted_date": "",
-      "first_seen": "2026-10-29"
-    },
-    {
-      "id": "56d9f65a95cd",
-      "title": "Public Relations Coordinator",
-      "district": "Bentonville Institute of Technology",
-      "location": "",
-      "url": "https://talent.careersnwa.com/companies/bentonville-institute-of-technology/jobs/98219774-public-relations-coordinator#content",
-      "platform": "CareersNWA",
-      "category": "marketing",
-      "genre": "commercial",
-      "match_reason": "public relations coordinator",
       "posted_date": "",
       "first_seen": "2026-10-29"
     },

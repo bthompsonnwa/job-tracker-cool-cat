@@ -1,6 +1,19 @@
 {
-  "last_updated": "2026-11-10T19:00+00:00",
+  "last_updated": "2026-11-11T18:57+00:00",
   "jobs": [
+    {
+      "id": "08607715ce1c",
+      "title": "Supply Chain Management Marketing Specialist",
+      "district": "University of Arkansas (UAF)",
+      "location": "Fayetteville, AR",
+      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville-AR/Supply-Chain-Management-Marketing-Specialist_R0093647-1",
+      "platform": "Workday",
+      "category": "marketing",
+      "genre": "education",
+      "match_reason": "marketing specialist",
+      "posted_date": "Posted Today",
+      "first_seen": "2026-11-11"
+    },
     {
       "id": "7cec15badef1",
       "title": "Senior Administrative Assistant, Brand, Marketing and Communications",
@@ -11,7 +24,7 @@
       "category": "marketing",
       "genre": "community",
       "match_reason": "marketing and communications",
-      "posted_date": "Posted 25 Days Ago",
+      "posted_date": "Posted 26 Days Ago",
       "first_seen": "2026-10-16"
     },
     {
@@ -76,32 +89,6 @@
       "category": "marketing",
       "genre": "commercial",
       "match_reason": "brand manager",
-      "posted_date": "",
-      "first_seen": "2026-11-09"
-    },
-    {
-      "id": "9a413df1df11",
-      "title": "Manager, Content Marketing (Risk)",
-      "district": "Kpmg Us 2",
-      "location": "",
-      "url": "https://talent.careersnwa.com/companies/kpmg-us-2/jobs/97249423-manager-content-marketing-risk#content",
-      "platform": "CareersNWA",
-      "category": "marketing",
-      "genre": "commercial",
-      "match_reason": "content marketing",
-      "posted_date": "",
-      "first_seen": "2026-11-09"
-    },
-    {
-      "id": "d7d046387628",
-      "title": "Manager, Content Marketing (Front Office/Ops/HR)",
-      "district": "Kpmg Us 2",
-      "location": "",
-      "url": "https://talent.careersnwa.com/companies/kpmg-us-2/jobs/97249100-manager-content-marketing-front-office-ops-hr#content",
-      "platform": "CareersNWA",
-      "category": "marketing",
-      "genre": "commercial",
-      "match_reason": "content marketing",
       "posted_date": "",
       "first_seen": "2026-11-09"
     }

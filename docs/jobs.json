@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-11T18:57+00:00",
+  "last_updated": "2026-11-12T19:17+00:00",
   "jobs": [
     {
       "id": "08607715ce1c",
@@ -11,8 +11,21 @@
       "category": "marketing",
       "genre": "education",
       "match_reason": "marketing specialist",
-      "posted_date": "Posted Today",
+      "posted_date": "Posted Yesterday",
       "first_seen": "2026-11-11"
+    },
+    {
+      "id": "0566531a6b80",
+      "title": "Social Media Coordinator",
+      "district": "Crystal Bridges / AWE",
+      "location": "Bentonville, AR",
+      "url": "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness/job/Bentonville-AR/Social-Media-Coordinator_JR2481",
+      "platform": "Workday",
+      "category": "marketing",
+      "genre": "community",
+      "match_reason": "social media coordinator",
+      "posted_date": "Posted Today",
+      "first_seen": "2026-11-12"
     },
     {
       "id": "7cec15badef1",
@@ -24,7 +37,7 @@
       "category": "marketing",
       "genre": "community",
       "match_reason": "marketing and communications",
-      "posted_date": "Posted 26 Days Ago",
+      "posted_date": "Posted 27 Days Ago",
       "first_seen": "2026-10-16"
     },
     {
@@ -76,19 +89,6 @@
       "category": "marketing",
       "genre": "commercial",
       "match_reason": "marketing manager",
-      "posted_date": "",
-      "first_seen": "2026-11-09"
-    },
-    {
-      "id": "4e8507c14422",
-      "title": "Manager, Marketing- Employer Brand Manager",
-      "district": "Walmart",
-      "location": "",
-      "url": "https://talent.careersnwa.com/companies/walmart/jobs/97389110-manager-marketing-employer-brand-manager#content",
-      "platform": "CareersNWA",
-      "category": "marketing",
-      "genre": "commercial",
-      "match_reason": "brand manager",
       "posted_date": "",
       "first_seen": "2026-11-09"
     }

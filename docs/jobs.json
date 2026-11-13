@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-12T19:17+00:00",
+  "last_updated": "2026-11-13T18:53+00:00",
   "jobs": [
     {
       "id": "08607715ce1c",
@@ -11,7 +11,7 @@
       "category": "marketing",
       "genre": "education",
       "match_reason": "marketing specialist",
-      "posted_date": "Posted Yesterday",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-11-11"
     },
     {
@@ -24,21 +24,8 @@
       "category": "marketing",
       "genre": "community",
       "match_reason": "social media coordinator",
-      "posted_date": "Posted Today",
+      "posted_date": "Posted Yesterday",
       "first_seen": "2026-11-12"
-    },
-    {
-      "id": "7cec15badef1",
-      "title": "Senior Administrative Assistant, Brand, Marketing and Communications",
-      "district": "Crystal Bridges / AWE",
-      "location": "Bentonville, AR",
-      "url": "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness/job/Bentonville-AR/Senior-Administrative-Assistant--Brand--Marketing-and-Communications_JR2455",
-      "platform": "Workday",
-      "category": "marketing",
-      "genre": "community",
-      "match_reason": "marketing and communications",
-      "posted_date": "Posted 27 Days Ago",
-      "first_seen": "2026-10-16"
     },
     {
       "id": "03cf1f516289",
@@ -67,17 +54,17 @@
       "first_seen": "2026-10-20"
     },
     {
-      "id": "e4d6e89210cb",
-      "title": "BU Category Marketing Manager - Foodservice Poultry",
-      "district": "Tyson Foods",
+      "id": "8ec0f24d33d7",
+      "title": "Supply Chain Management Marketing Specialist",
+      "district": "University of Arkansas",
       "location": "",
-      "url": "https://talent.careersnwa.com/companies/tyson-foods/jobs/97834401-bu-category-marketing-manager-foodservice-poultry#content",
+      "url": "https://talent.careersnwa.com/companies/university-of-arkansas/jobs/99663262-supply-chain-management-marketing-specialist#content",
       "platform": "CareersNWA",
       "category": "marketing",
-      "genre": "commercial",
-      "match_reason": "marketing manager",
+      "genre": "education",
+      "match_reason": "marketing specialist",
       "posted_date": "",
-      "first_seen": "2026-10-25"
+      "first_seen": "2026-11-13"
     },
     {
       "id": "01504af1967f",

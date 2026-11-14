@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-13T18:53+00:00",
+  "last_updated": "2026-11-14T17:25+00:00",
   "jobs": [
     {
       "id": "08607715ce1c",
@@ -11,7 +11,7 @@
       "category": "marketing",
       "genre": "education",
       "match_reason": "marketing specialist",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-11-11"
     },
     {
@@ -24,7 +24,7 @@
       "category": "marketing",
       "genre": "community",
       "match_reason": "social media coordinator",
-      "posted_date": "Posted Yesterday",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-11-12"
     },
     {
@@ -52,6 +52,19 @@
       "match_reason": "digital marketing",
       "posted_date": "",
       "first_seen": "2026-10-20"
+    },
+    {
+      "id": "bc42bbc57973",
+      "title": "Social Media Manager",
+      "district": "Sellcord 2",
+      "location": "",
+      "url": "https://talent.careersnwa.com/companies/sellcord-2/jobs/99879678-social-media-manager#content",
+      "platform": "CareersNWA",
+      "category": "marketing",
+      "genre": "commercial",
+      "match_reason": "social media manager",
+      "posted_date": "",
+      "first_seen": "2026-11-14"
     },
     {
       "id": "8ec0f24d33d7",

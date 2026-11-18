@@ -1,6 +1,19 @@
 {
-  "last_updated": "2026-11-17T20:10+00:00",
+  "last_updated": "2026-11-18T19:42+00:00",
   "jobs": [
+    {
+      "id": "ac9faad947bf",
+      "title": "LIBRARIAN",
+      "district": "AR State Jobs (NWA)",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Pine-Bluff-LIBRARIAN-AR-71601/1451767400/",
+      "platform": "SuccessFactors",
+      "category": "library",
+      "genre": "community",
+      "match_reason": "librarian",
+      "posted_date": "",
+      "first_seen": "2026-11-18"
+    },
     {
       "id": "03cf1f516289",
       "title": "Marketing and Communications ManagerFeatured",
@@ -39,19 +52,6 @@
       "match_reason": "social media manager",
       "posted_date": "",
       "first_seen": "2026-11-14"
-    },
-    {
-      "id": "8ec0f24d33d7",
-      "title": "Supply Chain Management Marketing Specialist",
-      "district": "University of Arkansas",
-      "location": "",
-      "url": "https://talent.careersnwa.com/companies/university-of-arkansas/jobs/99663262-supply-chain-management-marketing-specialist#content",
-      "platform": "CareersNWA",
-      "category": "marketing",
-      "genre": "education",
-      "match_reason": "marketing specialist",
-      "posted_date": "",
-      "first_seen": "2026-11-13"
     }
   ],
   "sources": [

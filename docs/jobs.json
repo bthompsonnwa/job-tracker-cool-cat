@@ -1,19 +1,6 @@
 {
-  "last_updated": "2026-11-18T19:42+00:00",
+  "last_updated": "2026-11-19T19:43+00:00",
   "jobs": [
-    {
-      "id": "ac9faad947bf",
-      "title": "LIBRARIAN",
-      "district": "AR State Jobs (NWA)",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Pine-Bluff-LIBRARIAN-AR-71601/1451767400/",
-      "platform": "SuccessFactors",
-      "category": "library",
-      "genre": "community",
-      "match_reason": "librarian",
-      "posted_date": "",
-      "first_seen": "2026-11-18"
-    },
     {
       "id": "03cf1f516289",
       "title": "Marketing and Communications ManagerFeatured",
@@ -39,6 +26,19 @@
       "match_reason": "digital marketing",
       "posted_date": "",
       "first_seen": "2026-10-20"
+    },
+    {
+      "id": "9c9044e57cac",
+      "title": "Marketing Manager",
+      "district": "Alice L Walton School of Medicine",
+      "location": "",
+      "url": "https://talent.careersnwa.com/companies/alice-l-walton-school-of-medicine/jobs/100200518-marketing-manager#content",
+      "platform": "CareersNWA",
+      "category": "marketing",
+      "genre": "commercial",
+      "match_reason": "marketing manager",
+      "posted_date": "",
+      "first_seen": "2026-11-19"
     },
     {
       "id": "bc42bbc57973",

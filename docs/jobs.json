@@ -1,6 +1,45 @@
 {
-  "last_updated": "2026-11-24T21:39+00:00",
+  "last_updated": "2026-11-25T20:47+00:00",
   "jobs": [
+    {
+      "id": "850260dd97bc",
+      "title": "Events Manager - Garvan Woodland Gardens",
+      "district": "University of Arkansas (UAF)",
+      "location": "Fayetteville, AR",
+      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville-AR/Events-Manager---Garvan-Woodland-Gardens_R0093518-1",
+      "platform": "Workday",
+      "category": "marketing",
+      "genre": "education",
+      "match_reason": "events manager",
+      "posted_date": "Posted 8 Days Ago",
+      "first_seen": "2026-11-25"
+    },
+    {
+      "id": "37b951842c1d",
+      "title": "Marketing & Outreach Specialist, Trades, Technology, and Outdoor Industries",
+      "district": "NWACC",
+      "location": "NWACC, Arkansas",
+      "url": "https://nwacc.wd1.myworkdayjobs.com/en-US/NWACC_External_Career_Site/job/NWACC-Arkansas/Marketing---Outreach-Specialist--Trades--Technology--and-Outdoor-Industries_JR-1328",
+      "platform": "Workday",
+      "category": "marketing",
+      "genre": "education",
+      "match_reason": "outreach specialist",
+      "posted_date": "Posted Yesterday",
+      "first_seen": "2026-11-25"
+    },
+    {
+      "id": "e3dd6a56ac68",
+      "title": "Archivist",
+      "district": "Crystal Bridges / AWE",
+      "location": "Bentonville, AR",
+      "url": "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness/job/Bentonville-AR/Archivist_JR2675",
+      "platform": "Workday",
+      "category": "library",
+      "genre": "community",
+      "match_reason": "archivist",
+      "posted_date": "Posted Today",
+      "first_seen": "2026-11-25"
+    },
     {
       "id": "03cf1f516289",
       "title": "Marketing and Communications ManagerFeatured",
